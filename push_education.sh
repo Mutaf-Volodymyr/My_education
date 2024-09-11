@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-TODAY=`date +%e_%m_%g`
+TODAY=`date +%G-%m-%d`
 
 git add .
 git commit -m "$TODAY"
