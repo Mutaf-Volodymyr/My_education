@@ -3,7 +3,7 @@ set -e
 
 
 
-git add .
+git add .A
 git commit -a
 git push
 
