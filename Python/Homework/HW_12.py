@@ -3,9 +3,10 @@
 # создания таблицы умножения. Выведите результат на экран с помощью команды print.
 
 # num = int(input("Enter a number: ")) + 1
+# l = len(str(num ** 2))+1
 # for i in range(1, num):
 #     for j in range(1, num):
-#         print(str(i*j).ljust(4), end='')
+#         print(str(i*j).ljust(l), end='')
 #     print()
 
 # 2. Напишите программу, которая принимает два списка одинаковой длины и создает новый

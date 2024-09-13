@@ -12,7 +12,7 @@ select
     cl.Language
 from world.countrylanguage as cl
 inner join world.country as c
-    on cl.CountryCode = c.Code;
+on cl.CountryCode = c.Code;
 
 # Выведите список городов с их населением и названием стран
 select
@@ -66,7 +66,6 @@ select
 from world.country as w
 inner join world.city c
     on w.Capital = c.ID;
-
 
 -- Или вариант Лены
 -- 6. Измените запрос 4 таким образом, чтобы выводилось население в столице.
