@@ -138,3 +138,6 @@
 - `git checkout -b <> origin/<>` - создание ветки на основе удаленной
 - `git rm --cached`
 
+
+
+
