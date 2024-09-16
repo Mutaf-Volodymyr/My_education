@@ -2,6 +2,8 @@
 # with open('products.csv', encoding='utf-8') as file:
 #     data = file.read()
 #     table = [r.split(',') for r in data.splitlines()]
+from pprint import pprint
+
 
 # ----------------------------Модуль csv
 # import csv
@@ -303,7 +305,7 @@
 #     for row in sorted(res.values(), key=lambda x: x[1]):
 #         writer.writerow(row)
 
------------------------------------------
+# -----------------------------------------
 # Рассмотрим следующий текстовый фрагмент:
 # ball,color,purple
 # ball,size,4
@@ -328,17 +330,110 @@
 # id_name — общее название для объектов
 # Функция должна привести содержимое файла в привычный CSV формат, сгруппировав строки по первому столбцу и назвав первый столбец id_name. Полученный результат функция должна записать в файл condensed.csv.
 
-def condense_csv(filename, id_name):
-    pass
+# def condense_csv(filename, id_name):
+#     import csv
+#     with open(filename, 'r', encoding='utf-8') as file, open('condensed.csv', 'w', encoding='utf-8', newline='') as outfile:
+#         rows = list(csv.reader(file))
+#         a = len({i[1] for i in rows})
+#         res = [id_name]
+#         res.extend([rows[i][1] for i in range(a)])
+#         res = [res]
+#         for i in range(0, len(rows), a):
+#             b = [rows[i][0]]
+#
+#             for j in range(a):
+#                 b.append(rows[i+j][-1])
+#             res.append(b)
+#         writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_NONE)
+#         writer.writerows(res)
 
+# -----------------------------------------
+# вам доступен файл student_counts.csv, который содержит данные о количестве учеников в некотором учебном заведении за период
+# 2000 - 2021 г. В первом столбце записан год, в последующих столбцах записан класс и количество учеников в данном классе в этом году:
+#
+# year,5-Б,3-Б,8-А,2-Г,7-Б,1-Б,3-Г,3-А,2-В,6-Б,6-А,8-Б,8-Г,11-А,2-А,7-А,5-А,2-Б,10-А,11-Б,8-В,4-А,7-В,3-В,1-А,9-А,11-В
+# 2000,19,15,18,29,19,17,26,29,28,30,26,27,27,22,29,19,27,20,16,18,15,27,19,29,22,20,23
+# 2001,21,30,22,19,26,20,24,27,20,30,24,30,29,21,20,19,29,27,23,25,30,30,23,22,22,18,22
+# ...
+# Напишите программу, которая записывает данную таблицу в файл sorted_student_counts.csv,
+# располагая все столбцы в порядке возрастания классов, при совпадении классов — в порядке возрастания букв.
 
+# решение курильщика (мое)
+# import csv
+# def class_sort(class_dict):
+#     sort_dict = dict()
+#     sort_dict['year'] = class_dict.pop('year')
+#     class_dict = sorted(list(class_dict.items()), key=lambda x: (int(x[0].split('-')[0]), x[0].split('-')[1]))
+#     for key, value in class_dict:
+#         sort_dict[key] = value
+#     return sort_dict
+#
+# with open('csv_1/student_counts.csv', 'r', encoding='utf-8') as student, open('csv_1/sorted_student_counts.csv', 'w', encoding='utf-8') as outfile:
+#     file = list(csv.DictReader(student))
+#     result = []
+#     for row in file:
+#         result.append(class_sort(row))
+#     writer = csv.DictWriter(outfile, fieldnames = result[0].keys(), delimiter=',', quoting=csv.QUOTE_NONE)
+#     writer.writeheader()
+#     writer.writerows(result)
 
+# решение здорового человека
+# import csv
+#
+# def key_func(grade):
+#     number, letter = grade.split('-')
+#     return int(number), letter
+#
+# with open('student_counts.csv', encoding='utf-8') as file:
+#     reader = csv.DictReader(file)
+#     columns = ['year'] + sorted(reader.fieldnames[1:], key=key_func)
+#     rows = list(reader)
+#
+# with open('sorted_student_counts.csv', 'w', encoding='utf-8') as file:
+#     writer = csv.DictWriter(file, fieldnames=columns)
+#     writer.writeheader()
+#     writer.writerows(rows)
 
+# -----------------------------------------
+# Дима очень хочет поесть, но денег у него мало. Помогите ему определить самый дешевый продукт, а также магазин,
+# в котором он продается. Вам доступен файл prices.csv, который содержит информацию о ценах продуктов в различных магазинах.
+# В первом столбце записано название магазина, а в последующих — цена на соответствующий товар в этом магазине:
+#
+# Магазин;Творог;Гречка;Рис;Бородинский хлеб;Яблоки;Пельмени;Овсяное печенье;Спагетти;Печеная фасоль;Мороженое;Фарш;Вареники;Картофель;Батончик
+# Пятерочка;69;133;129;83;141;90;72;123;149;89;88;106;54;84
+# Магнит;102;87;95;75;109;112;97;82;101;134;69;61;141;79
+# ...
+# Напишите программу, которая определяет и выводит самый дешевый продукт и название магазина, в котором он продается, в следующем формате:
+# <название продукта>: <название магазина>
+# Если имеется несколько самых дешевых товаров, то следует вывести тот товар, чье название меньше в лексикографическом сравнении. Если один
+# товар продается в нескольких магазинах по одной минимальной цене, то следует вывести тот магазин, чье название меньше в лексикографическом сравнении.
 
-
-
-
-
-
+# import csv
+# import time
+# start_time1 = time.time()
+# with open('csv_1/prices.csv', encoding='utf-8') as file:
+#     reader = csv.DictReader(file, delimiter=';')
+#     market, product, price = '', 'я'*10, 10**10
+#     for row in reader:
+#         for key, val in row.items():
+#             if val.isdigit() and int(val) <= price and key < product:
+#                 price = int(val)
+#                 market = row['Магазин']
+#                 product = key
+#
+#     print(product, market, sep=': ')
+# print(time.time() - start_time1)
+#
+# # решение лаконичней и немного быстрее, но есть предположение, что оперативки кушает больше
+# import csv
+# import time
+# start_time2 = time.time()
+# with open('csv_1/prices.csv', encoding='UTF-8') as f:
+#     h, *rows = csv.reader(f, delimiter=';')
+# goods = [(r[0], h[x], r[x]) for r in rows for x in range(1, len(h))]
+# cheapest = min(goods, key=lambda x: (int(x[2]), x[1], x[0]))
+#
+# print(f'{cheapest[1]}: {cheapest[0]}')
+# print(time.time() - start_time2)
 
 

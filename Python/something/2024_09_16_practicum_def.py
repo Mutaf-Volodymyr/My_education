@@ -7,10 +7,10 @@
 # программа должна печатать “можете поспать”.
 # ???? что с условием
 
-def isSleep(*, isWeekday:bool, isVacation:bool) ->bool:
-    print('You can sleep' if any((not isWeekday, isVacation))  else 'Get up!')
-
-isSleep(isWeekday=True, isVacation=False)
+# def isSleep(*, isWeekday:bool, isVacation:bool) ->bool:
+#     print('You can sleep' if any((not isWeekday, isVacation))  else 'Get up!')
+#
+# isSleep(isWeekday=True, isVacation=False)
 
 # --------------------------------------
 # Напишите функцию, которая возвращает факториал заданного числа.
@@ -34,21 +34,23 @@ isSleep(isWeekday=True, isVacation=False)
 # Имя: <имя>, Фамилия <фамилия>, Возраст <возраст>.
 # немного усложним
 
-
 # import csv
 # import sys
+# # создание файла через потоковый ввод, разделитель ;
+# def write_table(*, a='a', name='persons.csv'):
+#     with open(name, a, encoding='utf-8') as outfile:
+#         file = [i.strip().split(';') for i in sys.stdin]
+#         writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_NONE)
+#         writer.writerows(file)
+# # вывод файла
+# def read_table(*, name='persons.csv'):
+#     with open(name, 'r', encoding='utf-8') as file:
+#         for line in file.readlines():
+#             name, surname, age, *_ = line.strip().split(',')
+#             print(f'name: {name}, surname: {surname}, age: {age}')
 #
-# with open('persons.csv', 'w', encoding='utf-8') as outfile:
-#     file = [i.strip().split(';') for i in sys.stdin]
-#     writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
-#     writer.writerow(['name', 'surname', 'age'])
-#     writer.writerows(file)
-#
-# ------------------------
-# with open('example.txt', 'r', encoding='utf-8') as file:
-#     for line in file.readlines():
-#         name, surname, age = line.strip().split()
-#         print(f'name: {name}, surname: {surname}, age: {age}')
+# write_table()
+# read_table()
 
 
 
