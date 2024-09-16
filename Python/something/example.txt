@@ -1,0 +1,5 @@
+Ivanov	Ivan	1980
+Smith	Ann	2000
+Petrov	Petro	1999
+Schmidt	Marta	1976
+Johnson	John	1965
