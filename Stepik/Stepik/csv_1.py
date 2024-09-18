@@ -357,7 +357,7 @@ from pprint import pprint
 # ...
 # Напишите программу, которая записывает данную таблицу в файл sorted_student_counts.csv,
 # располагая все столбцы в порядке возрастания классов, при совпадении классов — в порядке возрастания букв.
-
+# 
 # решение курильщика (мое)
 # import csv
 # def class_sort(class_dict):
@@ -376,7 +376,7 @@ from pprint import pprint
 #     writer = csv.DictWriter(outfile, fieldnames = result[0].keys(), delimiter=',', quoting=csv.QUOTE_NONE)
 #     writer.writeheader()
 #     writer.writerows(result)
-
+#
 # решение здорового человека
 # import csv
 #
@@ -393,7 +393,7 @@ from pprint import pprint
 #     writer = csv.DictWriter(file, fieldnames=columns)
 #     writer.writeheader()
 #     writer.writerows(rows)
-
+#
 # -----------------------------------------
 # Дима очень хочет поесть, но денег у него мало. Помогите ему определить самый дешевый продукт, а также магазин,
 # в котором он продается. Вам доступен файл prices.csv, который содержит информацию о ценах продуктов в различных магазинах.
@@ -407,7 +407,7 @@ from pprint import pprint
 # <название продукта>: <название магазина>
 # Если имеется несколько самых дешевых товаров, то следует вывести тот товар, чье название меньше в лексикографическом сравнении. Если один
 # товар продается в нескольких магазинах по одной минимальной цене, то следует вывести тот магазин, чье название меньше в лексикографическом сравнении.
-
+#
 # import csv
 # import time
 # start_time1 = time.time()
@@ -435,5 +435,11 @@ from pprint import pprint
 #
 # print(f'{cheapest[1]}: {cheapest[0]}')
 # print(time.time() - start_time2)
+
+
+
+
+
+
 
 
