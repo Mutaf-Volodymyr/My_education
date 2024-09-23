@@ -56,6 +56,7 @@ select Region, avg(LifeExpectancy)
 from country
 group by Region;
 
+
 # Найдите самый населенный город (подсказка: использовать подзапросы)
 select concat('в городе ', ci.Name) as a, concat('что в стране ', co.Name) as b, concat('проживает ', ci.Population, ' человек') as c
 from city ci
@@ -64,5 +65,4 @@ on ci.CountryCode = co.Code
 where ci.Population = (
     select max(Population)
     from city);
-
 
