@@ -26,6 +26,7 @@
 # s4 = 'b' * 5000
 # print(s1 is s2)
 # print(s3 is s4)
+# print(s2 is s3)
 
 
 # --------------------------
@@ -236,8 +237,6 @@
 
 
 # https://habr.com/ru/companies/wunderfund/articles/328404/
-
-
 
 
 
