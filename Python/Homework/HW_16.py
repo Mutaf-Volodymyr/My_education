@@ -33,11 +33,15 @@ def make_sum_matrix(matrix:list) ->str:
     return f'Сумма чисел матрицы {sum(summ)}'
 
 
-# print(make_sum_matrix(filling_make_empty_matrix(make_empty_matrix())))
+print(make_sum_matrix(filling_make_empty_matrix(make_empty_matrix())))
 
 
 
 # 2. Напишите программу, которая принимает список чисел от пользователя и сортирует его в порядке убывания,
 # используя метод sort() и параметр reverse=True. Выведите отсортированный список на экран.
 
-print(*sorted([is_valid_num('Введите число: ') for i in range(is_valid_num('Введите количество чисел: '))], reverse=True))
+# print(*sorted([is_valid_num('Введите число: ') for i in range(is_valid_num('Введите количество чисел: '))], reverse=True))
+
+
+
+
