@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../SQL/2024_09_27_Sammary.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Stepik/Stepik/Counter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Linux/all_comand.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Linux/all_comand.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_17.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../something/2024_09_30_Lambda.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Stepik/Stepik/functions_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW_16.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW_16.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../something/2024_09_26_list_comprechension.py" beforeDir="false" afterPath="$PROJECT_DIR$/../something/2024_09_26_list_comprechension.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SQL/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SQL/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Stepik/Stepik/defaultdict_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/Stepik/defaultdict_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Stepik/Stepik/memory_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/Stepik/memory_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Stepik/Stepik/mistakes_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/Stepik/mistakes_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Stepik/Stepik/recursion_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/Stepik/recursion_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Stepik/Stepik/test_recutsion.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/Stepik/test_recutsion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,52 +39,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.HW_12.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW_13.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW_14.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW_15.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW_16.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.HW_12.executor": "Run",
+    "Python.HW_13.executor": "Run",
+    "Python.HW_14.executor": "Run",
+    "Python.HW_15.executor": "Run",
+    "Python.HW_16.executor": "Run",
+    "Python.HW_17.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.language",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.HW_16">
-    <configuration name="HW_12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW_12.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.HW_17">
     <configuration name="HW_12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="ENV_FILES" value="" />
@@ -266,13 +248,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="HW_17" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW_17.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.HW_17" />
         <item itemvalue="Python.HW_16" />
         <item itemvalue="Python.HW_15" />
         <item itemvalue="Python.HW_14" />
         <item itemvalue="Python.HW_13" />
-        <item itemvalue="Python.HW_12" />
       </list>
     </recent_temporary>
   </component>
@@ -302,6 +307,9 @@
       <workItem from="1727442755291" duration="132000" />
       <workItem from="1727454576222" duration="1094000" />
       <workItem from="1727509370601" duration="723000" />
+      <workItem from="1727718825550" duration="1234000" />
+      <workItem from="1727772576861" duration="2436000" />
+      <workItem from="1727789736884" duration="1112000" />
     </task>
     <servers />
   </component>
@@ -322,8 +330,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Homework$HW_13.coverage" NAME="HW_13 Coverage Results" MODIFIED="1726478363179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_12.coverage" NAME="HW_12 Coverage Results" MODIFIED="1726213333521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Homework$HW_16.coverage" NAME="HW_16 Coverage Results" MODIFIED="1727510251046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Homework$HW_16.coverage" NAME="HW_16 Coverage Results" MODIFIED="1727719337945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_14.coverage" NAME="HW_14 Coverage Results" MODIFIED="1726729467577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Homework$HW_17.coverage" NAME="HW_17 Coverage Results" MODIFIED="1727790409444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_15.coverage" NAME="HW_15 Coverage Results" MODIFIED="1727090510055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

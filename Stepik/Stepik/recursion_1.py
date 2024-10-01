@@ -231,13 +231,13 @@
 #     recursive(data)
 #     return sum(total)
 
-####### НЕ ПОНИМАЮ ПОЧЕМУ Я НЕ МОГУ ПОЛУЧИТЬ ДОСТУП К ПЕРЕМЕННОЙ #######
+####### НЕ ПОНИМАЮ ПОЧЕМУ Я НЕ МОГУ ПОЛУЧИТЬ ДОСТУП К ПЕРЕМЕННОЙ (теперь понимаю)#######
 # def recursive_sum(data):
 #     total = 0
 #     def recursive(data1):
+#         nonlocal total
 #         if type(data1) == int:
 #             total += data1
-#             print(data1)
 #         elif type(data1) == list:
 #             for i in data1:
 #                 recursive(i)
@@ -259,17 +259,75 @@
 #
 # print(recursive_sum(my_list))
 
-############## ОБЬЯСНЕНИЕ ############
 
-# total = 0
-# def my_function():
-#     print(total)
-#     total += 1
-# my_function()
-# print(total)
+###############################################
+# Реализуйте linear() с использованием рекурсии, которая принимает один аргумент:
+#
+# nested_lists — список, элементами которого являются целые числа или списки, элементами которых, в свою очередь, также являются либо целые числа, либо списки; вложенность может быть произвольной
+# Функция должна возвращать новый список, представляющий собой линеаризованный список nested_lists.
+#
+# def linear(nested_lists):
+#     total = []
+#     def recursive(data1):
+#         if type(data1) == int:
+#             total.append(data1)
+#         elif type(data1) == list:
+#             for i in data1:
+#                 recursive(i)
+#     recursive(nested_lists)
+#     return total
+#
+# my_list = [3, [4], [5, [6, [7, 8]]]]
+#
+# print(linear(my_list))
 
-# total = []
-# def my_function():
-#     total.append(1)
-# my_function()
-# print(total)
+
+###############################################
+# Реализуйте функцию get_value(), которая принимает два аргумента в следующем порядке:
+# nested_dicts — словарь, содержащий в качестве значений произвольные объекты или словари, которые, в свою очередь,
+# так же содержат в качестве значений произвольные объекты или словари; вложенность может быть произвольной
+    # key — хешируемый объект
+# Функция должна определять значение, которое соответствует ключу key в словаре nested_dicts или в одном из его
+# вложенных словарей, и возвращать полученный результат.
+
+def get_value(nested_dicts, key):
+    if key in nested_dicts:
+        return nested_dicts[key]
+    for i in nested_dicts.values():
+        if isinstance(i, dict):
+            value = get_value(i, key)
+            if value is not None:
+                return value
+#
+# data = {'firstName': 'Тимур', 'lastName': 'Гуев', 'birthDate': {'day': 10, 'month': 'October', 'year': 1993}, 'address': {'streetAddress': 'Часовая 25, кв. 127', 'city': {'region': 'Московская область', 'type': 'город', 'cityName': 'Москва'}, 'postalCode': '125315'}}
+#
+# print(get_value(data, 'cityName'))
+
+
+###############################################
+# Реализуйте функцию get_all_values(), которая принимает два аргумента в следующем порядке:
+    # nested_dicts — словарь, содержащий в качестве значений произвольные объекты или словари, которые,
+# в свою очередь, так же содержат в качестве значений произвольные объекты или словари; вложенность может быть произвольной
+    # key — хешируемый объект
+# Функция должна определять все значения, которые соответствуют ключу key в словаре nested_dicts и всех его вложенных словарях, и возвращать их в виде множества. Если ключа key нет ни в одном словаре, функция должна вернуть пустое множество.
+#
+# def get_all_values(nested_dicts, key):
+#     res = set()
+#     def get_value(nested_dicts, key):
+#         if key in nested_dicts:
+#             res.add(nested_dicts[key])
+#         for i in nested_dicts.values():
+#             if isinstance(i, dict):
+#                 value = get_value(i, key)
+#                 if value is not None:
+#                     return value
+#     get_value(nested_dicts, key)
+#     return res
+#
+#
+# my_dict = {'users': {'Arthur': {'grades': [4, 4, 3], 'top_grade': 4}, 'Timur': {'grades': [5, 5, 5], 'top_grade': 5}}}
+# result = get_all_values(my_dict, 'top_grade')
+#
+# print(*sorted(result))
+
+

@@ -22,31 +22,32 @@ def factorial_common(n):
     return res
 
 
-range_num = 1
-factorial_num = 995
-round_num = 100
+range_num = 100
+
+
+
 
 
 start = perf_counter()
-for _ in range(range_num):
-    factorial_cached(factorial_num)
+for i in range(range_num):
+    factorial_cached(i)
 end = perf_counter()
 fc = end-start
-print(f'Время подсчета функции с мемоизацией: {round((fc), round_num)}')
+print(f'Время подсчета функции с мемоизацией: {round((fc), range_num)}')
 
 start = perf_counter()
-for _ in range(range_num):
-    factorial(factorial_num)
+for i in range(range_num):
+    factorial(i)
 end = perf_counter()
 f = end-start
-print(f'Время подсчета функции без мемоизации: {round((f), round_num)}')
+print(f'Время подсчета функции без мемоизации: {round((f), range_num)}')
 
 start = perf_counter()
-for _ in range(range_num):
-    factorial_common(factorial_num)
+for i in range(range_num):
+    factorial_common(i)
 end = perf_counter()
 fs = end-start
-print(f'Время подсчета функции с обычным циклом: {round((fs), round_num)}')
+print(f'Время подсчета функции с обычным циклом: {round((fs), range_num)}')
 
 print()
 

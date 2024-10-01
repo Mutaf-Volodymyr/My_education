@@ -238,5 +238,3 @@
 
 # https://habr.com/ru/companies/wunderfund/articles/328404/
 
-
-

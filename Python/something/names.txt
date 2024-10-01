@@ -1,0 +1,12 @@
+Ivanov	Ivan	1980	2	80
+Smith	Ann	2000	1	76
+Petrov	Petro	1999	1	90
+Schmidt	Marta	1976	3	65
+Johnson	John	1965	5	99
+Archer	Lenard	1978	5	51
+Harrell	Jean	1963	3	43
+Dennis	Edwina	1967	4	64
+Reyn	Marcelo	1989	5	20
+Kline	Deanne	1970	6	51
+Lane	Ben	1981	6	27
+Callan	Milan	1984	4	45

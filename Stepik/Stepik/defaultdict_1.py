@@ -208,17 +208,17 @@
     # senders — список имен отправителей
 # Функция должна определять отправителя, имеющего наибольшее количество слов, и возвращать его имя.
 # Если таких отправителей несколько, следует вернуть имя того, чье имя больше в лексикографическом сравнении.
-
-def best_sender(messages, senders):
-    from collections import defaultdict
-    res = defaultdict(int)
-    for message, sender in zip(messages, senders):
-        res[sender] += len(message.split())
-    return max(res, key=lambda p: (res[p], p))
-
-
-messages = ['Hi, Linda', 'Hi, Sam', 'How are you doing?']
-senders = ['Sam Fisher', 'Linda', 'Sam Fisher']
-
-print(best_sender(messages, senders))
+#
+# def best_sender(messages, senders):
+#     from collections import defaultdict
+#     res = defaultdict(int)
+#     for message, sender in zip(messages, senders):
+#         res[sender] += len(message.split())
+#     return max(res, key=lambda p: (res[p], p))
+#
+#
+# messages = ['Hi, Linda', 'Hi, Sam', 'How are you doing?']
+# senders = ['Sam Fisher', 'Linda', 'Sam Fisher']
+#
+# print(best_sender(messages, senders))
 
