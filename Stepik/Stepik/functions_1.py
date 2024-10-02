@@ -167,18 +167,131 @@
 
 ###########################################
 
-def greet():
-    greet.age = 17
+# Реализуйте функцию polynom(), которая принимает один аргумент:
+#
+# x — вещественное число
+# Функция должна возвращать значение выражения x ** 2  + 1.
+
+# Также функция должна иметь атрибут values, представляющий собой множество (тип set) всех значений функции, которые уже были вычислены.
+
+# def polynom(x):
+#     res = x**2 + 1
+#     polynom.__dict__.setdefault('values', set()).add(res)
+#     return res
+
+
+###########################################
+# Реализуйте функцию remove_marks(), которая принимает два аргумента в следующем порядке:
+    # text — произвольная строка
+    # marks — набор символов
+# Функция должна возвращать строку text, предварительно удалив из нее все символы, перечисленные в строке marks.
+# Также функция remove_marks() должна иметь атрибут count, представляющий собой количество вызовов данной функции.
+
+# def remove_marks(text, marks):
+#     remove_marks.__dict__['count'] = remove_marks.__dict__.get('count', 0) + 1
+#     for i in marks:
+#         text = text.replace(i, "")
+#     return text
+
+################### АХУЕТЬ ########################
+
+# def closure():
+#     count = 0
+#     def inner():
+#         nonlocal count
+#         count += 1
+#         print(count)
+#     return inner
+#
+# start = closure()
+# another = closure()             # другое замыкание, со своими локальными значениями
+#
+# start()                         # выводит 1
+# start()                         # выводит 2
+#
+# another()                       # выводит 1
+#
+# start()                         # выводит 3
+
+
+###########################################
+# Реализуйте функцию power(), которая принимает один аргумент:
+# degree — целое число
+# Функция power() должна возвращать функцию, которая принимает в качестве аргумента целое число x
+# и возвращает значение x в степени degree.
+
+# def power(degree):
+#     def inner(x):
+#         return x ** degree
+#     return inner
+
+###########################################
+# Реализуйте функцию generator_square_polynom(), которая принимает три аргумента в следующем порядке:
+    # a — вещественное число, коэффициент
+    # b — вещественное число, коэффициент
+    # c — вещественное число, коэффициент
+# Функция generator_square_polynom() должна возвращать функцию, которая принимает в качестве аргумента
+# вещественное число x и возвращает значение выражения квадратного трехчлена.
+
+# def generator_square_polynom(a, b, c):
+#     return lambda x: a*x*x + b*x + c
+
+
+###########################################
+# Реализуйте функцию sourcetemplate(), которая принимает один аргумент:
+# url — URL адрес
+# Функция sourcetemplate() должна возвращать функцию, которая принимает
+# произвольное количество именованных аргументов и возвращает url адрес,
+# объединенный со строкой запроса, сформированной из переданных аргументов.
+# При вызове без аргументов она должна возвращать исходный url адрес без изменений.
+
+# def sourcetemplate(url):
+#     def inner(**kwargs):
+#         res = '&'.join((str(k)+'='+str(v) for k, v in sorted(kwargs.items())))
+#         return url + '?' + res if res else url
+#     return inner
+#
+# url = 'https://beegeek.ru'
+# load = sourcetemplate(url)
+# print(load())
 
 
 
-greet.value = 777
-greet.numbers = [1, 2, 3]
-greet.name = 'Timur'
-greet.__dict__['age'] = 18
 
-print(greet.__dict__)
+###########################################
+# Реализуйте функцию date_formatter(), которая принимает один аргумент:
+#
+# country_code — код страны
+# Функция date_formatter() должна возвращать функцию, которая принимает в качестве аргумента дату (тип date)
+# и возвращает строку с данной датой в формате страны с кодом country_code.
 
-greet()
+# from datetime import date
+# def date_formatter(country_code):
+#     def inner(d):
+#         match country_code:
+#             case 'ru': p = '%d.%m.%Y'
+#             case 'us': p = '%m-%d-%Y'
+#             case 'ca': p = '%Y-%m-%d'
+#             case 'br': p = '%d/%m/%Y'
+#             case 'fr': p = '%d.%m.%Y'
+#             case 'pt': p = '%d-%m-%Y'
+#         return d.strftime(p)
+#     return inner
+#
+# date_ru = date_formatter('ru')
+# today = date(2022, 1, 25)
+# print(date_ru(today))
 
-print(greet.__dict__)
+
+
+###########################################
+# Реализуйте функцию sort_priority(), которая принимает два аргумента в следующем порядке:
+# values — список чисел
+# group — список, кортеж или множество чисел
+# Функция должна сортировать по неубыванию список чисел values, делая при этом приоритетной
+# группу чисел из group, которая должна следовать первой.
+
+# def sort_priority(values, group):
+#     values[:] = sorted([(0 if i in group else 1, i) for i in values])
+#     values[:] = [j for _, j in values]
+
