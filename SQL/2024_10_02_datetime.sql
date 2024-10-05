@@ -165,6 +165,42 @@ from news
 where created_at > now() - interval 18 month;
 
 
+# Найдите разницу в днях между датой создания аккаунта пользователя и датой его первого
+# комментария. Отобразите имя, фамилию пользователя и количество дней до первого комментария.
+select u.id,  u.first_name, u.last_name, ifnull(TIMESTAMPDIFF(day, new_tab.created_at, u.created_at), 'no comment') as dey_dif
+from user as u
+left join (
+    select author_id, min(c.created_at) as created_at
+    from social_media.comment c
+    group by c.author_id) as new_tab
+    on u.id = new_tab.author_id;
+
+
+# Выведите новости, которые не получили ни одного комментария в течение 30 дней с момента
+# их создания. Отобразите идентификатор статьи, заголовок и дату создания.
+
+select us.first_name, us.last_name, timestampdiff(day, first_coment, us.created_at) as day_diff
+FROM social_media.user as us
+inner join (select author_id, min(created_at) as first_coment
+from comment group by author_id) as com
+on us.id = com.author_id;
+
+
+
+# Выведите новости, которые не получили ни одного комментария в течение 30 дней с момента
+# их создания. Отобразите идентификатор статьи, заголовок и дату создания.
+SELECT n.created_at, cf.created_at
+FROM social_media.news n
+LEFT JOIN social_media.comment c ON c.news_id = n.id
+AND TIMESTAMPDIFF(DAY, n.created_at, c.created_at) > 300
+LEFT JOIN (
+SELECT c2.news_id, c2.created_at
+FROM social_media.comment c2
+GROUP BY c2.news_id
+ORDER BY c2.created_at
+) as cf ON cf.news_id = n.id
+WHERE c.id IS NULL
+AND cf.created_at >= n.created_at;
 
 
 
