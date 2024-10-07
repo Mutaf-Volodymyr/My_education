@@ -290,14 +290,14 @@
 # Функция должна определять значение, которое соответствует ключу key в словаре nested_dicts или в одном из его
 # вложенных словарей, и возвращать полученный результат.
 
-def get_value(nested_dicts, key):
-    if key in nested_dicts:
-        return nested_dicts[key]
-    for i in nested_dicts.values():
-        if isinstance(i, dict):
-            value = get_value(i, key)
-            if value is not None:
-                return value
+# def get_value(nested_dicts, key):
+#     if key in nested_dicts:
+#         return nested_dicts[key]
+#     for i in nested_dicts.values():
+#         if isinstance(i, dict):
+#             value = get_value(i, key)
+#             if value is not None:
+#                 return value
 #
 # data = {'firstName': 'Тимур', 'lastName': 'Гуев', 'birthDate': {'day': 10, 'month': 'October', 'year': 1993}, 'address': {'streetAddress': 'Часовая 25, кв. 127', 'city': {'region': 'Московская область', 'type': 'город', 'cityName': 'Москва'}, 'postalCode': '125315'}}
 #
