@@ -51,13 +51,15 @@ on ci.CountryCode = co.Code
 group by CountryCode;
 
 
--- Поменять запрос так, чтобы выводилось среднее количество городов в стране.
-
-# Среднее количество городов в стране? Это что? Это как?
-# Среднее - это сумма числовых значений деленных на их количество.
-# Средняя зп, пенсий, средний бал.
-# У каждой страны есть количество городов. Допустим у нас есть знаменатель.
-# Числитель что??
+-- Поменять запрос так, чтобы выводилось среднее количество городов в стране по континенту.
+select t.Continent, avg(amount_of_cities) as avg_continent
+from
+    (select count(ci.Name) as amount_of_cities, co.Continent
+    from city as ci
+    inner join country as co
+    on ci.CountryCode = co.Code
+    group by CountryCode) as t
+group by t.Continent;
 
 
 
