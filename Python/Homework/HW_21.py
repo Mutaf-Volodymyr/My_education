@@ -6,10 +6,13 @@
 
 # from collections import Counter
 # from string import punctuation
+# def count_words(text):
+#     text = [i.lower().strip(punctuation) for i in text.split()]
+#     res = Counter(text)
+#     return res
 #
-# text = [i.lower().strip(punctuation) for i in input().split()]
-# res = Counter(text)
-# for k, v in res.most_common():
+#
+# for k, v in count_words(input()).items():
 #     print(f'слово "{k}" встречается: {v} раз(а)')
 
 

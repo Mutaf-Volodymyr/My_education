@@ -48,8 +48,9 @@ except ZeroDivisionError:
     print('Только не деление на ноль!!!!')
 else:
     print('Процесс успешно завершен')
-finally:
     file.close()
+
+
 
 
 
