@@ -8,14 +8,10 @@
 # from string import punctuation
 # def count_words(text):
 #     text = [i.lower().strip(punctuation) for i in text.split()]
-#     res = Counter(text)
-#     return res
+#     return Counter(text)
 #
-#
-# for k, v in count_words(input()).items():
+# for k, v in count_words(input()).most_common():
 #     print(f'слово "{k}" встречается: {v} раз(а)')
-
-
 
 
 # 2. Напишите программу, которая создает именованный кортеж Person для хранения информации о человеке,
@@ -39,7 +35,7 @@
 # в зависимости от выбранного варианта. Выведите полученное значение на экран.
 #
 
-# def get_value_from_dict(di:dict, k:str|int, flag=True):
+# def get_value_from_dict(di: dict, k: str | int, flag=True):
 #     if flag:
 #         return di.get(k, 'нет ключа')
 #     else:
