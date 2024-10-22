@@ -119,6 +119,12 @@
   - `echo $i`
   - `done`
 
+
+
+
+
+
+
 ### Cron - планировщик
 - `export EDITOR=nano` - меняет редактор на "nano"
 - https://crontab.guru - чтение 
