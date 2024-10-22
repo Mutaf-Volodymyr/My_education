@@ -85,6 +85,12 @@
   - `z` - название компрессора
   - `-C` - ключ указывающий на изменение директории извлечения
 
+### Планировщик
+- `crontab` - 
+  - `-e` - изменить планировщик 
+  - `l` - посмотреть планировщик
+  - `-u <user>` - посмотреть чужие планировки 
+
 
 ### Текстовые редакторы в Linux
 - `vi` :
@@ -155,6 +161,10 @@
 - `git remote add upstream: путь SSH` - 
 - `git fetch upstream`
 - `git merge upstream/main`
+- `git rev-parse --show-toplevel ` - где инциализирован гит
+- `git diff` - показать конфликты
+- `git mergetool` - 
+- `git config --global merge.tool meld`
 
 
 
