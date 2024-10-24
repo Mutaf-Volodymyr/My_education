@@ -34,5 +34,61 @@
 # for _ in range(20):
 #     print(next(is_prime))
 
+#################################
+
+# def my_generator():
+#     try:
+#         print('11111')
+#         yield 1
+#         print('22222')
+#         yield 2
+#         yield 3
+#     except ValueError:
+#         print('++++')
+#     yield from (i for i in range(20))
+# #
+# #
+# #
+# gen = my_generator()
+# print(next(gen)) # Выводит 1
+# gen.throw(ValueError("Enough"))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+
+
+
+
+# def my_generator():
+#     yield 1
+#     yield 2
+#     yield 3
+#
+# gen = my_generator()
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+
+
+
+# Напишите генератор, который принимает на вход поток элементов и выдает только уникальные
+# элементы, сохраняя их порядок встречаемости (для уже повторяющихся элементов генератор
+# не выдает ничего)
+
+def my_generator():
+    total_set = set()
+    received_value = yield
+    while True:
+        if received_value not in total_set:
+            total_set.add(received_value)
+            received_value = yield received_value
+        else:
+            received_value = yield None
+
+gen = my_generator()
+
+gen.__next__()
+while True:
+    print(gen.send(int(input())))
 
 
