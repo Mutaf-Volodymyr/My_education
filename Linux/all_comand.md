@@ -171,6 +171,7 @@
 - `git diff` - показать конфликты
 - `git mergetool` - 
 - `git config --global merge.tool meld`
+- `git remote add upstream git@github.com:it-career-hub/git_team_work.git`
 
 
 
