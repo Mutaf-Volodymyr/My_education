@@ -121,7 +121,129 @@
 ###############################################################
 
 
+# Реализуйте функцию get_weekday(), которая принимает один аргумент:
+#
+# number — целое число (от 1 до 7 включительно)
+# Функция должна возвращать полное название дня недели на русском, который соответствует числу number, при этом:
+#
+# если number не является целым числом, функция должна возбуждать исключение:
+# TypeError('Аргумент не является целым числом')
+# если number является целым числом, но не принадлежит отрезку
+# [1;7], функция должна возбуждать исключение:
+# ValueError('Аргумент не принадлежит требуемому диапазону')
+
+#
+# def get_weekday(number):
+#     week = {1: "Понедельник", 2: "Вторник", 3: "Среда", 4: "Четверг", 5: "Пятница", 6: "Суббота", 7: "Воскресенье", }
+#     if not isinstance(number, int):
+#         raise TypeError('Аргумент не является целым числом')
+#     elif number not in week.keys():
+#         raise ValueError('Аргумент не принадлежит требуемому диапазону')
+#     else:
+#         return week[number]
 
 
+
+
+# Реализуйте функцию get_id(), которая принимает два аргумента:
+#
+# names — список имен учеников, обучающихся в школе
+# name — имя поступающего ученика
+# Функция должна возвращать идентификационный номер, который получит поступающий в школу ученик, при этом
+#
+# если имя ученика name не является строкой (тип str), функция должна возбуждать исключение:
+# TypeError('Имя не является строкой')
+# если имя ученика name является строкой (тип str), но не представляет собой корректное имя, функция должна возбуждать исключение:
+# ValueError('Имя не является корректным')
+
+# def get_id(names, name):
+#     if not isinstance(name, str):
+#         raise TypeError('Имя не является строкой')
+#     elif not name.isalpha() or name != name.title():
+#         raise ValueError('Имя не является корректным')
+#     else:
+#         return len(names) + 1
+
+
+
+#
+# Напишите программу, которая принимает на вход название JSON файла, десериализует содержащийся в этом файле объект и выводит его.
+#
+# если файла с данным названием нет в папке с программой, программа должна вывести текст:
+# Файл не найден
+# если файл с данным названием содержит некорректные данные (то есть не удовлетворяющие формату JSON), программа должна вывести текст:
+# Ошибка при десериализации
+
+# import json
+# try:
+#     with open(input()) as file:
+#         data = json.load(file)                # передаем файловый объект
+#         print(data)
+# except FileNotFoundError:
+#     print("Файл не найден")
+# except json.decoder.JSONDecodeError:
+#     print('Ошибка при десериализации')
+
+
+# Назовем пароль хорошим, если
+#
+# его длина равна 9 или более символам
+# в нем присутствуют большие и маленькие буквы любого алфавита
+# в нем имеется хотя бы одна цифра
+# Реализуйте функцию is_good_password() в стиле LBYL, которая принимает один аргумент:
+#
+# string — произвольная строка
+# Функция должна возвращать True, если строка string представляет собой хороший пароль, или False в противном случае.
+
+# def is_good_password(string):
+#     if string != string.upper() and string != string.lower():
+#         if any(i.isdigit() for i in string) and len(string) > 8:
+#             return True
+#     return False
+
+# Реализуйте функцию is_good_password() в стиле EAFP, которая принимает один аргумент:
+#
+# string — произвольная строка
+# Функция должна возвращать True, если строка string представляет собой хороший пароль, или возбуждать исключение:
+# LengthError, если его длина меньше  9 символов
+# LetterError, если в нем отсутствуют буквы или все буквы имеют одинаковый регистр
+# DigitError, если в нем нет ни одной цифры
+
+# class PasswordError(Exception):
+#     pass
+#
+# class LengthError(PasswordError):
+#     pass
+#
+# class LetterError(PasswordError):
+#     pass
+#
+# class DigitError(PasswordError):
+#     pass
+#
+#
+# def is_good_password(string):
+#     if len(string) < 9:
+#         raise LengthError
+#     elif string == string.upper() or string == string.lower():
+#         raise LetterError
+#     elif not any(i.isdigit() for i in string):
+#         raise DigitError
+#     else:
+#         return True
+#
+#
+# while True:
+#     try:
+#         is_good_password(input())
+#     except LengthError:
+#         print('LengthError')
+#     except LetterError:
+#         print('LetterError')
+#     except DigitError:
+#         print('DigitError')
+#     else:
+#         print('Success!')
+#         break
 
 

@@ -5,7 +5,7 @@
 #     return tuple([v(number).replace(k, '').upper() for k, v in {'0b':bin, '0o':oct, '0x':hex}.items()])
 #
 # print(convert(15))
-
+import sys
 
 ###########################################
 # Как уже известно, функция zip() объединяет элементы различных последовательностей.
@@ -294,4 +294,132 @@
 # def sort_priority(values, group):
 #     values[:] = sorted([(0 if i in group else 1, i) for i in values])
 #     values[:] = [j for _, j in values]
+
+
+# Пароль считается правильным, если в нем присутствует, хотя бы одна заглавная латинская буква, хотя бы
+# одна строчная латинская буква и хотя бы одна цифра. Функция verification() должна вызывать функцию success()
+# с аргументом login, если переданный пароль является правильным, иначе — функцию failure()
+# с аргументами login и строкой-сообщением об ошибке:
+
+#
+# from re import search
+# def verification(login, password, success, failure):
+#     if search(r'[A-Za-z]', password) is None:
+#         return failure(login, 'в пароле нет ни одной буквы')
+#     if search(r'[A-Z]', password) is None:
+#         return failure(login, 'в пароле нет ни одной заглавной буквы')
+#     if search(r'[a-z]', password) is None:
+#         return failure(login, 'в пароле нет ни одной строчной буквы')
+#     if search(r'\d', password) is None:
+#         return failure(login, 'в пароле нет ни одной цифры')
+#     return success(login)
+#
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+# verification('Ruslan_Chaniev', 'stepikstepik2', success, failure)
+
+
+# Напишите программу, которая переопределяет встроенную функцию print() так, чтобы она печатала все переданные строковые аргументы в верхнем регистре.
+
+# normal_print = print
+# def print(*args, sep=' ', end='\n'):
+#     args = [i.upper() if type(i) == str else i for i in args]
+#     normal_print(*args, sep=sep.upper(), end=end.upper())
+
+
+# Вам доступен словарь films, ключом в котором является название некоторого фильма, а значением — словарь с оценками этого фильма от изданий imdb и kinopoisk.
+#
+# Дополните приведенный ниже код, чтобы он вывел название фильма с наименьшей средней оценкой.
+#
+# films = {'Spider-Man: No Way Home': {'imdb': 8.8, 'kinopoisk': 8.3},
+#          'Don"t Look Up': {'imdb': 7.3, 'kinopoisk': 7.6},
+#          'Encanto': {'imdb': 7.3, 'kinopoisk': 7.4},
+#          'The Witcher': {'imdb': 8.2, 'kinopoisk': 7.3},
+#          'Ghostbusters: Afterlife': {'imdb': 7.3, 'kinopoisk': 8},
+#          'Harry Potter 20th Anniversary: Return to Hogwarts': {'imdb': 8.1, 'kinopoisk': 8.2},
+#          'Shingeki no Kyojin': {'imdb': 9.0, 'kinopoisk': 8.3},
+#          'The Matrix': {'imdb': 8.7, 'kinopoisk': 8.5},
+#          'The Dark Knight': {'imdb': 9.0, 'kinopoisk': 8.5},
+#          'The Shawshank Redemption': {'imdb': 9.3, 'kinopoisk': 9.1},
+#          'Avengers: Endgame': {'imdb': 8.4, 'kinopoisk': 7.7}}
+#
+# print(min(films, key=lambda x: sum(films[x].values())))
+
+
+# Реализуйте функцию non_negative_even(),  которая принимает один аргумент:
+#
+# numbers — непустой список чисел
+# Функция должна возвращать True, если все числа в списке numbers являются четными и неотрицательными, или False в противном случае.
+
+# def non_negative_even(numbers):
+#     return all(i % 2 == 0 and i >= 0 for i in numbers)
+
+
+
+# Реализуйте функцию is_greater(), которая принимает два аргумента в следующем порядке:
+#
+# lists — список, элементами которого являются списки целых чисел
+# number — целое число
+# Функция должна возвращать True, если хотя бы в одном вложенном списке из списка lists сумма всех элементов больше number, или False в противном случае.
+
+
+# def is_greater(lists, number):
+#     for i in lists:
+#         if number < sum(i):
+#             return True
+#     return False
+
+
+
+
+# Реализуйте функцию custom_isinstance(), которая принимает два аргумента в следующем порядке:
+#
+# objects — список произвольных объектов
+# typeinfo — тип данных или кортеж с типами
+# Функция должна возвращать единственное число — количество объектов из списка objects, которые принадлежат типу typeinfo или одному из типов, если был передан кортеж.
+
+# def custom_isinstance(objects, typeinfo):
+#     return sum(isinstance(i, typeinfo) for i in objects)
+
+
+# Вам доступен список numbers. Дополните приведенный ниже код, чтобы он вывел индекс максимального элемента в этом списке.
+# numbers = [-7724, 5023, 3197, -102, -4129, -880, 5857, -2866, -8913, 1195, 9809, 5347, -8071, 903, 3030,
+#            -4347, -3354, 1024, 8670, 4210, -5228, 8900, 4823, -2002, 4900, 9520, -3658, 1104, -9554, 3064,
+#            9632, -8701, 3384, 4370, 2034, 7822, -9694, 3347, 7440, -8459, 3238, -5193, -3381, 5281, 9022, 5559,
+#            7593, -6540, -6204, -2483, 8729, 5810, -8254, -9846, -1801, 4882, 3838, -3140, 7609, -3325, 6026, 2994,
+#            -1677, 1266, -1893, -4408, -5722, -2841, 9812, 5837, -7474, 4624, -664, 6998, 7888, -971, 8810, 3812, -5396,
+#            2593, 512, -4634, 9735, -3062, 9031, -9300, 3657, 6332, 7552, 8125, -725, 4392, 1727, 8194, -2828, -4314,
+#            -8967, -7912, -1363, -5957]
+#
+# print(max(enumerate(numbers), key=lambda x:x[1])[0])
+
+
+
+# Реализуйте функцию my_pow(), которая принимает один аргумент:
+#
+# number — целое неотрицательное число
+# Функция должна возвращать сумму, состоящую из цифр числа, возведенных в степень их порядкового номера.
+
+
+# def my_pow(number):
+#     return sum(int(n)**i for i, n in enumerate(str(number), 1))
+
+
+# Дополните приведенный ниже код, чтобы он определил, какую прибыль принес каждый мультфильм,
+# и вывел названия мультфильмов, указав для каждого соответствующую прибыль.
+# Мультфильмы должны быть расположены в лексикографическом порядке, каждый на отдельной строке
+
+# names = ['Moana', 'Cars', 'Zootopia', 'Ratatouille', 'Coco', 'Inside Out', 'Finding Nemo', 'Frozen']
+# budgets = [150000000, 120000000, 150000000, 150000000, 180000000, 175000000, 94000000, 150000000]
+# box_offices = [643331111, 462216280, 1023784195, 620702951, 807082196, 857611174, 940335536, 1280802282]
+#
+# for n, b, c in sorted(zip(names, budgets, box_offices)):
+#     print(f'{n}: {c-b}$')
+
+
+
 

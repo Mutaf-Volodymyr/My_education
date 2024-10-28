@@ -204,11 +204,68 @@
 
 
 #########################
-from re import sub, IGNORECASE
-def normalize_jpeg(filename):
-    return sub(r'(\.jpeg\b)|(\.jpg\b)', '.jpg', filename, flags=IGNORECASE)
+# from re import sub, IGNORECASE
+# def normalize_jpeg(filename):
+#     return sub(r'(\.jpeg\b)|(\.jpg\b)', '.jpg', filename, flags=IGNORECASE)
+#
+# print(normalize_jpeg('stepik.jpeg.jpeg'))
 
-print(normalize_jpeg('stepik.jpeg.jpeg'))
 
 
 
+# from re import finditer
+# patern = r'(7-\d{3}-\d{3}-\d{2}-\d{2})|(8-\d{3}-\d{4}-\d{4})'
+# for i in finditer(patern, input()):
+#     print(i.group())
+
+
+#########################
+# Напишите программу, которая находит во фрагменте HTML-страницы все гиперссылки и выводит их составляющие — адресные части и указатели.
+# from re import findall
+# from sys import stdin
+#
+# regex = r'(?<=href=\").+?(?=</a>)'
+# for line in stdin:
+#     if 'href=' not in line:
+#         continue
+#     print(findall(regex, line)[0].replace('">', ', '))
+
+
+
+#########################
+# from re import findall
+# from sys import stdin
+#
+# regex = r'(?<=href=\").+?(?=</a>)'
+# for line in stdin:
+#     if 'href=' not in line:
+#         continue
+#     print(findall(regex, line)[0].replace('">', ', '))
+
+
+
+# import sys
+# import re
+#
+# text = sys.stdin.read()
+# pattern = r'<a href="(.+)">(.+)</a>'
+#
+# for address, pointer in re.findall(pattern, text):
+#     print(f'{address}, {pointer}')
+
+
+
+#########################
+
+
+
+
+import sys
+from bs4 import BeautifulSoup
+from collections import defaultdict
+result = defaultdict(set)
+for line in sys.stdin:
+    for tag in BeautifulSoup(line, "html.parser")():
+        result[tag.name] |= set(tag.attrs)
+for k, v in sorted(result.items()):
+    print(f"{k}: {', '.join(sorted(v))}")

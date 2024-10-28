@@ -273,10 +273,148 @@
 
 
 
+#
+# Напишите программу, которая определяет студентов, удовлетворяющих следующим условиям:
+#
+# возраст 18 лет или более
+# прогресс по курсу 75% или более
+# Программа должна создать файл data.csv с двумя столбцами — name (имя) и phone (номер), и записать в него данные выбранных студентов,
+# расположив их в лексикографическом порядке имён. В качестве разделителя в файле data.csv должна быть использована запятая.
+#
+# from json import load
+# import csv
+#
+# with open('json_1/students.json', 'r', encoding='utf8') as file, open('json_1/data.csv', 'w', encoding='utf8') as outfile:
+#     res = []
+#     for line in load(file):
+#         n, s, age, pr, ph = line.values()
+#         if age >= 18 and pr >= 75:
+#             res.append((n, ph))
+#     writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_NONE)
+#     writer.writerow(['name', 'phone'])
+#     writer.writerows(sorted(res))
+
+
+# Напишите программу, которая определяет бассейн, подходящий Тимуру. Программа должна вывести его размеры и адрес в следующем формате
+
+# from json import load
+# from datetime import time, datetime
+#
+# def is_valid_time(di):
+#     diapason = di['WorkingHoursSummer']['Понедельник']
+#     pull_open, pull_close = diapason.split('-')
+#     pull_open = datetime.strptime(pull_open, "%H:%M").time()
+#     pull_close = datetime.strptime(pull_close, "%H:%M").time()
+#     ti_open = time(10, 00)
+#     ti_close = time(12, 00)
+#     if ti_open >= pull_open and ti_close <= pull_close:
+#         return True
+#     else:
+#         return False
+#
+#
+# with open('json_1/pools.json', 'r', encoding='utf8') as file:
+#     file = load(file)
+#     first = filter(is_valid_time, file)
+#     winner = next(first)
+#     for di in first:
+#         if winner['DimensionsSummer']['Length'] < di['DimensionsSummer']['Length']:
+#             winner = di
+#         elif winner['DimensionsSummer']['Length'] == di['DimensionsSummer']['Length']:
+#             if winner['DimensionsSummer']['Width'] < di['DimensionsSummer']['Width']:
+#                 winner = di
+#     print(f'{winner['DimensionsSummer']['Length']}x{winner['DimensionsSummer']['Width']}')
+#     print(winner['Address'])
+
+
+# Вам доступен файл exam_results.csv, который содержит информацию о прошедшем экзамене в некотором учебном заведении.
+    # В первом столбце записано имя студента,
+    # во втором — фамилия,
+    # в третьем — оценка за экзамен,
+    # в четвертом — дата и время сдачи в формате YYYY-MM-DD HH:MM:SS,
+    # в пятом — адрес электронной почты
+# Каждый студент имеет право пересдать экзамен два раза, поэтому он может встречаться в исходном
+# файле до трёх раз с различной оценкой и различными датой и временем сдачи.
+#
+# Напишите программу, которая для каждого студента определяет его максимальную оценку, а также дату и время ее получения.
+# Программа должна создать список словарей, каждый из которых содержит следующие пары ключ-значение:
+    # name — имя студента
+    # surname — фамилия студента
+    # best_score — максимальная оценка за экзамен
+    # date_and_time — дата и время получения максимальной оценки в исходном формате
+    # email — адрес электронной почты
+
+# Полученный список программа должна записать в файл best_scores.json, причем словари в списке должны быть
+# расположены в лексикографическом порядке названий электронных почт.
+
+# from json import dump
+# import csv
+# from datetime import datetime
+#
+# with open('json_1/exam_results.csv', 'r', encoding='utf8') as file, open('json_1/best_scores.json', 'w', encoding='utf8') as outfile:
+#     rows = csv.reader(file, delimiter=',')
+#     next(rows)
+#     res = {}
+#
+#     for name, surname, score, dat, email in rows:
+#         score = int(score)
+#         if name + surname not in res:
+#             res[name + surname] = {'name': name, 'surname': surname, 'best_score': score, 'date_and_time': dat, 'email': email}
+#         elif res[name + surname]['best_score'] < score:
+#             res[name + surname]['best_score'] = score
+#             res[name + surname]['date_and_time'] = dat
+#         elif res[name + surname]['best_score'] ==  score:
+#             t1 = datetime.strptime(res[name + surname]['date_and_time'], '%Y-%m-%d %H:%M:%S')
+#             t2 = datetime.strptime(dat, '%Y-%m-%d %H:%M:%S')
+#             if t1 < t2:
+#                 res[name + surname]['date_and_time'] = dat
+#     res = sorted(res.values(), key=lambda x: x['email'])
+#     dump(res, outfile, indent=4)
+
+
+
+# Напишите программу, которая:
+#
+# определяет район Москвы, в котором находится больше всего заведений, и выводит название этого района и количество заведений в нем
+# определяет сеть с самым большим числом заведений и выводит название этой сети и количество заведений этой сети
+
+# import json
+#
+# with open('json_1/food_services.json', 'r') as file:
+#     data = json.load(file)
+#     dictrict = {}
+#     fran = {}
+#
+#     for d in data:
+#         dictrict[d['District']] = dictrict.get(d['District'], 0) + 1
+#         if d['OperatingCompany']:
+#             fran[d['OperatingCompany']] = fran.get(d['OperatingCompany'], 0) + 1
+#
+#     mx_d = max(dictrict, key=dictrict.get)
+#     xm_f = max(fran, key=fran.get)
+#     print(f'{mx_d}: {dictrict[mx_d]}')
+#     print(f'{xm_f}: {fran[xm_f]}')
 
 
 
 
+# апишите программу, которая определяет все виды заведений и для каждого вида находит самое большое заведение
+# этого вида (имеет наибольшее количество посадочных мест). Программа должна вывести все виды заведений в л
+# ексикографическом порядке, указав для каждого самое большое заведение и количество посадочных мест в нем.
+# Данные о заведениях должны быть расположены каждые на отдельной строке,
 
-
-
+# import json
+# with open('json_1/food_services.json', 'r') as file:
+#     data = json.load(file)
+#     res = {}
+#
+#     for i in data:
+#         ty = i['TypeObject']
+#         col = i['SeatsCount']
+#         if ty not in res:
+#             res[ty] = (i['Name'], col)
+#         elif res[ty][1] < col:
+#             res[ty] = (i['Name'], col)
+#
+#     for i in sorted(res):
+#         print(f'{i}: {res[i][0]}, {res[i][1]}')

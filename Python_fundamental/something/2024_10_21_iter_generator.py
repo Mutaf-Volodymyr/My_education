@@ -75,20 +75,25 @@
 # элементы, сохраняя их порядок встречаемости (для уже повторяющихся элементов генератор
 # не выдает ничего)
 
-def my_generator():
-    total_set = set()
-    received_value = yield
-    while True:
-        if received_value not in total_set:
-            total_set.add(received_value)
-            received_value = yield received_value
-        else:
-            received_value = yield None
+# def my_generator():
+#     total_set = set()
+#     received_value = yield
+#     while True:
+#         if received_value not in total_set:
+#             total_set.add(received_value)
+#             received_value = yield received_value
+#         else:
+#             received_value = yield None
+#
+# gen = my_generator()
+#
+# gen.__next__()
+# while True:
+#     print(gen.send(int(input())))
 
-gen = my_generator()
 
-gen.__next__()
-while True:
-    print(gen.send(int(input())))
+
+
+
 
 

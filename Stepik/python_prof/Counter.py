@@ -176,3 +176,74 @@ from collections import Counter
 #         print(f'{k.ljust(mx)} |{mark*v}')
 
 
+#
+
+# Вам доступна переменная data, содержащая Counter словарь. Дополните приведенный ниже код, чтобы он добавил этому словарю два атрибута:
+#
+# min_values() — функция, которая возвращает список элементов, имеющих наименьшее значение
+# max_values() — функция, которая возвращает список элементов, имеющих наибольшее значение
+# from collections import Counter
+#
+# data = Counter('aksjaskfjsklfjdslkfjajfopewtoieqpwdpqworiiqjskanvmcxbmpewrqopkqwlmdzczmxvmvlnjpjqpkqzxvmbowiqeorewi')
+#
+# data.min_values = lambda: [item for item in data.items() if item[1] == min(data.values())]
+# data.max_values = lambda: [item for item in data.items() if item[1] == max(data.values())]
+#
+#
+# print(data.max_values())
+# print(data.min_values())
+
+
+
+# Вам доступен файл name_log.csv, в котором находятся логи изменения имени пользователя.
+# В первом столбце записано измененное имя пользователя, во втором — адрес электронной почты,
+# в третьем — дата и время изменения. При этом email пользователь менять не может, только имя:
+
+# import csv
+# from collections import Counter
+#
+# with open('Counter_1/name_log.csv', 'r', encoding='utf-8') as file:
+#     reader = csv.reader(file)
+#     res = Counter()
+#     next(reader, None)
+#     for _, emeil, _ in reader:
+#         res.update([emeil])
+#
+#     for e, v in sorted(res.most_common()):
+#         print(f'{e}: {v}')
+
+
+
+# Напишите программу, которая выводит единственное число — сумму, заработанную Тимуром за год на продаже овощей.
+# import csv
+# import json
+# from collections import Counter
+#
+#
+# with open('Counter_1/prices.json', 'r') as prices_file:
+#     prices = json.load(prices_file)
+#     res = Counter()
+#     for i in range(1,5):
+#         with open(f'Counter_1/quarter{i}.csv', 'r') as f:
+#             reader = csv.reader(f)
+#             next(reader)
+#             res.update({n: sum(map(int, p)) * prices[n] for n, *p in reader})
+#     print(res.total())
+
+
+
+# Напишите программу, которая вычисляет общую сумму денег, которую Тимур заработает на продаже книг.
+
+# from collections import Counter
+# books = Counter(int(i) for i in input().split())
+# total = 0
+# for _ in range(int(input())):
+#     book, price = map(int, input().split())
+#     if book in +books:
+#         books.subtract({book: 1})
+#         total += price
+#
+# print(total)
+
+
+
