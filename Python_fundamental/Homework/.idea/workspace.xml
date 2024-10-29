@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../something/2024_10_28_anotation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../something/quetions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Stepik/python_prof/1111.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Stepik/python_prof/chain_map_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW_24.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW_24.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../something/2024_10_21_iter_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../something/2024_10_21_iter_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../something/persons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../something/persons.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/Counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/Counter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/Json_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/Json_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/Zip_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/Zip_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/anotations_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/anotations_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/defaultdict_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/defaultdict_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/functions_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/functions_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/functools_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/functools_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/generator_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/generator_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/mistakes_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/mistakes_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/pickle_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/pickle_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/recursion_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/recursion_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/regular_expressions_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/regular_expressions_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../something/2024_10_28_anotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../something/2024_10_28_anotation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +244,9 @@
       <workItem from="1729580476673" duration="76000" />
       <workItem from="1729765180608" duration="4434000" />
       <workItem from="1729839707864" duration="2330000" />
-      <workItem from="1730102896797" duration="557000" />
+      <workItem from="1730102896797" duration="1318000" />
+      <workItem from="1730146915000" duration="109000" />
+      <workItem from="1730188721944" duration="24000" />
     </task>
     <servers />
   </component>

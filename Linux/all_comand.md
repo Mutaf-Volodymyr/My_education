@@ -174,4 +174,36 @@
 - `git remote add upstream git@github.com:it-career-hub/git_team_work.git`
 
 
+### Командный проект 
+http://3.73.44.38
 
+
+ssh -i ich.pem ec2-user@3.73.44.38
+ssh -i ~/.ssh/id_rsa ec2-user@3.73.44.38
+
+### Посмотреть статус процесса httpd:
+    sudo service httpd status
+
+
+/var/www/html/mediawiki/LocalSettings.php
+
+### Запустить сервис:
+
+    sudo service httpd start
+
+### Посмотреть статус сервиса:
+
+    status httpd.service
+
+sudo find / -type f -size +100M -exec du -h {} +
+
+### Настройки приложения есть в файле: /home/ec2-user/LocalSettings\ \ 5\).php
+### Для работоспособности файл должен лежать в /var/www/html/mediawiki/
+### Попытаемся скопировать этот файл:
+
+
+
+
+/home/ec2-user/back_up/back_up_script.sh                                                                                                                
+                                                                                                                                                                         
+                                                                                                                                                       174,0-1       Bot 
