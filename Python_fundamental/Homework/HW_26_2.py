@@ -10,7 +10,10 @@ parser.add_argument('--pathdir', help='Path to input file')
 args = parser.parse_args()
 pathdir = args.pathdir
 
-for dir_path, _, filenames in os.walk(pathdir):
+for dir_path, dir_dir, filenames in os.walk(pathdir):
+    for directory in dir_dir:
+        res_dir = os.path.join(dir_path, directory)
+        os.system(f'echo {res_dir}')
     for filename in filenames:
         res = os.path.join(dir_path, filename)
         os.system(f'echo {res}')
