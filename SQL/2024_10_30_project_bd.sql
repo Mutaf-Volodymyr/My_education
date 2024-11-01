@@ -35,9 +35,9 @@ create table teachers (
 );
 
 create table curses2students (
-    id int primary key auto_increment,
     student_id int,
     curses_id int,
+    foreign key (student_id, curses_id)
     foreign key (student_id) references students(student_id),
     foreign key (curses_id) references curses(curses_id)
 );
