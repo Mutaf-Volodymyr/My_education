@@ -5,15 +5,20 @@
 
 import argparse, os
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--pathdir', help='Path to input file')
-args = parser.parse_args()
-pathdir = args.pathdir
+def find_file_and_directory():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--pathdir', help='Path to input file')
+    args = parser.parse_args()
+    pathdir = args.pathdir
 
-for dir_path, dir_dir, filenames in os.walk(pathdir):
-    for directory in dir_dir:
-        res_dir = os.path.join(dir_path, directory)
-        print('Directory: ' + res_dir)
-    for filename in filenames:
-        res = os.path.join(dir_path, filename)
-        print('File: ' + res)
+    for dir_path, dir_dir, filenames in os.walk(pathdir):
+        for directory in dir_dir:
+            res_dir = os.path.join(dir_path, directory)
+            print('Directory: ' + res_dir)
+        for filename in filenames:
+            res = os.path.join(dir_path, filename)
+            print('File: ' + res)
+
+
+if __name__ == '__main__':
+    find_file_and_directory()
