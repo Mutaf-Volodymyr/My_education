@@ -13,7 +13,7 @@ pathdir = args.pathdir
 for dir_path, dir_dir, filenames in os.walk(pathdir):
     for directory in dir_dir:
         res_dir = os.path.join(dir_path, directory)
-        os.system(f'echo {res_dir}')
+        print('Directory: ' + res_dir)
     for filename in filenames:
         res = os.path.join(dir_path, filename)
-        os.system(f'echo {res}')
+        print('File: ' + res)
