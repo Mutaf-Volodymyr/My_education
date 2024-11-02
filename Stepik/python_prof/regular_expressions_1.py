@@ -9,6 +9,7 @@
 #
 # Напишите программу, которая принимает произвольное количество телефонных номеров и для каждого выводит
 # отдельно его код страны, код города и номер.
+from typing import re
 
 # from re import fullmatch
 # from sys import stdin
@@ -51,8 +52,6 @@
 # for i in res:
 #     if i:
 #         print(i.group())
-
-
 
 
 #######################################################
@@ -211,8 +210,6 @@
 # print(normalize_jpeg('stepik.jpeg.jpeg'))
 
 
-
-
 # from re import finditer
 # patern = r'(7-\d{3}-\d{3}-\d{2}-\d{2})|(8-\d{3}-\d{4}-\d{4})'
 # for i in finditer(patern, input()):
@@ -231,7 +228,6 @@
 #     print(findall(regex, line)[0].replace('">', ', '))
 
 
-
 #########################
 # from re import findall
 # from sys import stdin
@@ -241,7 +237,6 @@
 #     if 'href=' not in line:
 #         continue
 #     print(findall(regex, line)[0].replace('">', ', '))
-
 
 
 # import sys
@@ -254,18 +249,91 @@
 #     print(f'{address}, {pointer}')
 
 
-
 #########################
 
 
+#
+# import sys
+# from bs4 import BeautifulSoup
+# from collections import defaultdict
+# result = defaultdict(set)
+# for line in sys.stdin:
+#     for tag in BeautifulSoup(line, "html.parser")():
+#         result[tag.name] |= set(tag.attrs)
+# for k, v in sorted(result.items()):
+#     print(f"{k}: {', '.join(sorted(v))}")
 
 
-import sys
-from bs4 import BeautifulSoup
-from collections import defaultdict
-result = defaultdict(set)
-for line in sys.stdin:
-    for tag in BeautifulSoup(line, "html.parser")():
-        result[tag.name] |= set(tag.attrs)
-for k, v in sorted(result.items()):
-    print(f"{k}: {', '.join(sorted(v))}")
+#########################
+
+# Реализуйте функцию normalize_jpeg(), которая принимает один аргумент:
+#
+# filename — название файла, имеющее расширение jpeg или jpg, которое может быть записано
+# буквами произвольного регистра
+# Функция должна возвращать новое название файла с нормализованным расширением — jpg.
+#
+# import re
+# def normalize_jpeg(name):
+#     pattern = r'(.jpeg$)|(.jpg$)'
+#     return re.sub(pattern, '.jpg', name, flags=re.IGNORECASE)
+#
+# print(normalize_jpeg('stepik.jpeg.jpeg'))
+#########################
+
+# Реализуйте функцию normalize_whitespace(), которая принимает один аргумент:
+#
+# string — произвольная строка
+# Функция должна заменять все множественные пробелы в строке string на единственный
+# пробел и возвращать полученный результат.
+
+# import re
+# def normalize_whitespace(string):
+#     return re.sub(r'\s+', ' ', string)
+
+
+# В Python существуют ключевые слова, которые нельзя использовать для
+# названия переменных, функций и классов. Для получения списка всех ключевых
+# слов можно воспользоваться атрибутом kwlist из модуля keyword.
+# Напишите программу, которая принимает строку текста и заменяет в ней все ключевые слова на <kw>.
+
+# import keyword
+# import re
+#
+# text = input()
+# text = re.sub('\\b|\\b'.join(keyword.kwlist), r'<kw>', text, flags=re.IGNORECASE)
+# print(text)
+
+
+# Напишите программу, которая меняет местами первые две буквы в каждом слове, состоящем из двух или более букв.
+
+# import re
+# text = input()
+# res = re.sub(r'\b(\w)(\w)(\w*)', r'\2\1\3',text)
+#
+# print(res)
+
+
+# Напишите программу, которая раскрывает все умножения в тексте и выводит полученный результат.
+
+# import re
+#
+# def func(match_obj):
+#     s = match_obj.group(0)
+#     num, sting = s.split('(')
+#     return int(num) * sting.strip(')')
+#
+# text = input()
+# while '(' in text:
+#     text = re.sub(r'\d+\(\w+\)', func,text)
+#
+# print(text)
+
+
+# Напишите программу, которая заменяет все повторяющиеся рядом стоящие слова на одно слово.
+
+
+# import re
+#
+# text = re.sub(r'\b(\w+)(\W+?\1\b)+', r'\1', input())
+#
+# print(text)
