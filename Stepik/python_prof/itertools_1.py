@@ -6,9 +6,7 @@
 # def tabulate(func):
 #     a = count(1)
 #     yield from (func(i) for i in a)
-import itertools
-
-
+import string
 ################################################
 # Реализуйте функцию factorials() с использованием функции accumulate(), которая принимает один аргумент:
 # n — натуральное число
@@ -20,7 +18,6 @@ import itertools
 #
 # def factorials(n):
 #     yield from accumulate(range(1, n+1), operator.mul)
-
 
 
 ################################################
@@ -52,7 +49,7 @@ import itertools
 #################################################
 # Реализуйте функцию drop_while_negative(), которая принимает один аргумент:
 #
-    # iterable — итерируемый объект, элементами которого являются целые числа
+# iterable — итерируемый объект, элементами которого являются целые числа
 # Функция должна возвращать итератор, генерирующий все числа итерируемого объекта iterable,
 # начиная с первого неотрицательного числа.
 
@@ -65,15 +62,14 @@ import itertools
 #################################################
 #
 # Реализуйте функцию drop_this(), которая принимает два аргумента в следующем порядке:
-    # iterable — итерируемый объект
-    # obj — произвольный объект
+# iterable — итерируемый объект
+# obj — произвольный объект
 # Функция должна возвращать итератор, генерирующий последовательность элементов итерируемого объекта
 # iterable, начиная с элемента, не равного obj.
 #
 # from itertools import dropwhile
 # def drop_this(iterable, obj):
 #     return dropwhile(lambda x: x == obj, iterable)
-
 
 
 #################################################
@@ -91,12 +87,11 @@ import itertools
 #     return next(filter(predicate, iterable), None)
 
 
-
 #################################################
 # Реализуйте функцию take(), которая принимает два аргумента в следующем порядке:
 #
-    # iterable — итерируемый объект
-    # n — натуральное число
+# iterable — итерируемый объект
+# n — натуральное число
 # Функция должна возвращать итератор, генерирующий последовательность из первых
 # n элементов итерируемого объекта iterable.
 # from itertools import islice
@@ -161,9 +156,6 @@ import itertools
 #     return max(map(sum, pairwise(iterable)))
 
 
-
-
-
 #################################################
 # Реализуйте функцию ncycles(), которая принимает два аргумента в следующем порядке:
 #
@@ -177,12 +169,11 @@ import itertools
 #     return chain.from_iterable(tee(iterable, times))
 
 
-
 #################################################
 # Реализуйте функцию grouper(), которая принимает два аргумента в следующем порядке:
 #
-    # iterable — итерируемый объект
-    # n — натуральное число
+# iterable — итерируемый объект
+# n — натуральное число
 # Функция должна возвращать итератор, генерирующий последовательность,
 # элементами которой являются объединенные в кортежи по n элементов
 # соседние элементы итерируемого объекта iterable. Если у элемента
@@ -192,7 +183,6 @@ import itertools
 # def grouper(iterable, n):
 #     args = [iter(iterable)] * n
 #     return zip_longest(*args)
-
 
 
 #################################################
@@ -218,8 +208,6 @@ import itertools
 # res = groupby(sorted(persons, key=lambda x: x.height), lambda x: x.height)
 # for k, v in res:
 #     print(str(k) + ':', ', '.join(sorted([i.name for i in v])))
-
-
 
 
 #################################################
@@ -256,16 +244,185 @@ import itertools
 #     print(*sorted(v), sep=', ')
 
 
+# from itertools import combinations
 
-from itertools import combinations
+# numbers1 = [1, 2, 3]
+# numbers2 = [3, 2, 1]
+#
+# combinations1 = set(combinations(numbers1, 2))
+# combinations2 = set(combinations(numbers2, 2))
+#
+# print(combinations1, combinations2)
 
-numbers1 = [1, 2, 3]
-numbers2 = [3, 2, 1]
-
-combinations1 = set(combinations(numbers1, 2))
-combinations2 = set(combinations(numbers2, 2))
-
-print(combinations1, combinations2)
+# ополните приведенный ниже код, чтобы он вывел все дела Тимура в алфавитном порядке,
+# указав для каждого набор соответствующих действий в правильной очередности, в следующем формате:
 
 
+from itertools import groupby
+# tasks = [('Отдых', 'поспать днем', 3),
+#         ('Ответы на вопросы', 'ответить на вопросы в дискорде', 1),
+#         ('ЕГЭ Математика', 'доделать курс по параметрам', 1),
+#         ('Ответы на вопросы', 'ответить на вопросы в курсах', 2),
+#         ('Отдых', 'погулять вечером', 4),
+#         ('Курс по ооп', 'обсудить темы', 1),
+#         ('Урок по groupby', 'добавить задачи на программирование', 3),
+#         ('Урок по groupby', 'написать конспект', 1),
+#         ('Отдых', 'погулять днем', 2),
+#         ('Урок по groupby', 'добавить тестовые задачи', 2),
+#         ('Уборка', 'убраться в ванной', 2),
+#         ('Уборка', 'убраться в комнате', 1),
+#         ('Уборка', 'убраться на кухне', 3),
+#         ('Отдых', 'погулять утром', 1),
+#         ('Курс по ооп', 'обсудить задачи', 2)]
 
+# f = lambda x: x[0]
+# sort_tasks = sorted(tasks, key=f)
+#
+# for k, v in groupby(sort_tasks, key=f):
+#     print(f'{k}:')
+#     for _, task, num in sorted(v, key=lambda x: x[2]):
+#         print(f'\t{num}. {task}')
+#     print()
+
+
+#
+# Реализуйте функцию group_anagrams(), которая принимает один аргумент:
+#
+# words — список слов
+# Функция должна группировать в кортежи слова из списка words, являющиеся анаграммами, и возвращать список полученных кортежей.
+#
+# from itertools import groupby
+# def group_anagrams(words:list[str])->list[tuple]:
+#     l = lambda x: sorted(x)
+#     return list(tuple(v) for _, v in groupby(sorted(words, key=l), l))
+#
+# groups = group_anagrams(['evil', 'father', 'live', 'levi', 'book', 'afther', 'boko'])
+#
+# print(*groups)
+
+
+# Реализуйте функцию ranges(), которая принимает один аргумент:
+#
+# numbers — список различных натуральных чисел, расположенных в порядке возрастания
+# Функция должна преобразовывать числа из списка numbers в отрезки, представляя их в виде кортежей,
+# где первый элемент кортежа является левой границей отрезка, второй элемент — правой границей отрезка.
+# Полученные кортежи-отрезки функция должна возвращать в виде списка.
+
+# from itertools import groupby
+# def ranges(numbers:list[int]) -> list[tuple]:
+#     numbers = sorted(numbers, key=lambda x: numbers.index(x) - x)
+#     res = []
+#     for _, v in groupby(numbers, key=lambda x: numbers.index(x) - x):
+#         v = list(v)
+#         res.append((v[0], v[-1]))
+#     return sorted(res)
+
+
+# Напишите программу, которая выводит все перестановки символов строки без дубликатов.
+
+# from itertools import permutations
+#
+# all_num_permutations = permutations(input())
+# for i in sorted(set(all_num_permutations)):
+#     print(''.join(i))
+
+
+# Дополните приведенный ниже код, чтобы он вывел количество
+# способов, которыми Тимур может приобрести книгу стоимостью 100$.
+
+# from itertools import combinations
+# wallet = [100, 100, 50, 50, 50, 50, 20, 20, 20, 10, 10, 10, 10, 10, 5, 5, 1, 1, 1, 1, 1]
+# counter = 0
+# for i in range(1, 16):
+#     for res in set(combinations(wallet, i)):
+#         if sum(res) == 100:
+#             counter += 1
+# print(counter)
+
+
+# from itertools import combinations_with_replacement
+#
+# wallet = [100, 50, 20, 10, 5]
+# counter = 0
+# for i in range(1, 21):
+#     for res in set(combinations_with_replacement(wallet, i)):
+#         if sum(res) == 100:
+#             counter += 1
+# print(counter)
+
+# def gen_100():
+#     for x1 in range(0, 101, 100):
+#         for x2 in range(0, 101, 50):
+#             for x3 in range(0, 101, 20):
+#                 for x4 in range(0, 101, 10):
+#                     for x5 in range(0, 101, 5):
+#                         yield x1 + x2 + x3 + x4 + x5
+#
+# print(sum(1 for x in gen_100() if x == 100))
+
+
+# from collections import namedtuple
+# from functools import reduce
+# import itertools
+#
+# Item = namedtuple('Item', ['name', 'mass', 'price'])
+#
+# items = [Item('Обручальное кольцо', 7, 49_000),
+#          Item('Мобильный телефон', 200, 110_000),
+#          Item('Ноутбук', 2000, 150_000),
+#          Item('Ручка Паркер', 20, 37_000),
+#          Item('Статуэтка Оскар', 4000, 28_000),
+#          Item('Наушники', 150, 11_000),
+#          Item('Гитара', 1500, 32_000),
+#          Item('Золотая монета', 8, 140_000),
+#          Item('Фотоаппарат', 720, 79_000),
+#          Item('Лимитированные кроссовки', 300, 80_000)]
+#
+# winner = {}
+# max_mass = int(input())
+# for i in range(1, len(items)+1):
+#     for res in itertools.combinations(items, i):
+#         mass = reduce(lambda x, y: x + y.mass, res, 0)
+#         if mass <= max_mass:
+#             money = reduce(lambda x, y: x + y.price, res, 0)
+#             winner[res] = money
+#
+#
+# if winner:
+#     for res in sorted(max(winner, key=lambda x: winner[x]), key=lambda x: x.name):
+#         print(res.name)
+# else:
+#     print('Рюкзак собрать не удастся')
+
+# Вам доступна программа, которая выводит все обозначения полей шахматной доски в алфавитном порядке через пробел.
+#
+# Перепишите данную программу с использованием функции product(), чтобы она выполняла ту же задачу.
+
+# from string import ascii_lowercase
+# from itertools import product
+#
+# letters = ascii_lowercase[:8]
+# digits = [1, 2, 3, 4, 5, 6, 7, 8]
+#
+# for a, b in product(letters, digits):
+#     print(f'{a}{b}', end=' ')
+
+
+# Вам доступна функция password_gen(), которая возвращает генератор, порождающий все трехсимвольные строковые пароли
+# Перепишите данную функцию с использованием функции product(), чтобы она выполняла ту же задачу.
+
+# from itertools import product
+# def password_gen():
+#     yield from map(lambda x: f'{x[0]}{x[1]}{x[2]}', (product(range(10), repeat=3)))
+
+
+
+
+# Напишите программу, которая генерирует в системе счисления n все числа длины m
+
+from itertools import product
+yo = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+
+n, m = int(input()), int(input())
+for i in product(yo[0:n], repeat=m):
+    print(''.join(i), end=' ')

@@ -337,3 +337,63 @@ from typing import re
 # text = re.sub(r'\b(\w+)(\W+?\1\b)+', r'\1', input())
 #
 # print(text)
+
+
+
+# Напишите программу, которая разбивает строку по символам точки, запятой и точки с запятой.
+# import re
+#
+# result = re.split(r'\s*[,;.]\s*', input())
+#
+# print(*result)
+
+
+
+# Дано логическое выражение, состоящее из переменных, а также
+# операторов |, &, and или or. Напишите программу, которая разбивает данную строку по указанным операторам.
+
+# import re
+#
+# result = re.split(r'\s*[|&]\s*|(?:\s*and\s*)|(?:\s*or\s*)', input())
+#
+# print(*result, sep=', ')
+
+
+
+# Реализуйте функцию multiple_split(), которая принимает два аргумента:
+#
+# string — строка
+# delimiters — список строк
+# Функция должна разбивать строку string на подстроки,
+# используя в качестве разделителей строки из списка delimiters, и возвращать полученный результат в виде списка.
+
+# import re
+# def multiple_split(string, delimiters):
+#     pattern = '|'.join([f'(?:{re.escape(i)})' for i in delimiters])
+#     result = re.split(pattern, string)
+#     return result
+
+
+
+
+# Напишите программу, которая складывает все натуральные числа в строке, находящиеся в указанном диапазоне индексов.
+
+# import re
+# x, y = map(int, input().split())
+# text = input()
+#
+# regex_obj = re.compile(r'\d+')
+# result = regex_obj.findall(text, pos=x, endpos=y)
+# print(sum(map(int,result)))
+
+
+# Напишите программу, которая удаляет все комментарии из Python кода.
+import sys
+import re
+
+text = sys.stdin.read()
+text = re.sub(r'^\s*#.+\n', '', text, flags=re.MULTILINE)
+text = re.sub(r'#.+', '', text)
+text = re.sub(r' *\"{3}.+?\"{3}\n', '', text, flags=re.DOTALL)
+print(text)
+

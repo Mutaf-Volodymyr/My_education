@@ -1,6 +1,5 @@
-
-import os
 from argparse import ArgumentParser
+
 
 def convert_bytes(size):
     if size < 1000:
@@ -13,11 +12,11 @@ def convert_bytes(size):
         return f'{round(size / 1073741824)} GB'
 
 
-parser = ArgumentParser() # создание экземпляра класса
+parser = ArgumentParser()  # создание экземпляра класса
 parser.add_argument('--path', '-p', help='input path to find')
 parser.add_argument('--type', '-t', help='input type (.py)', default='py')
 parser.add_argument('--size', '-s', type=int, help='input min size', default=0)
-args = parser.parse_args() # распаковка ключей в одну переменную
+args = parser.parse_args()  # распаковка ключей в одну переменную
 
 total = 0
 
@@ -31,8 +30,3 @@ for root, directories, files in os.walk(args.path):
                 print(f'{convert_bytes(size)} : {full_path}')
 
 print(f'Total size: {convert_bytes(total)}')
-
-
-
-
-
