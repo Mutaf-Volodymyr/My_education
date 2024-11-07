@@ -1,0 +1,36 @@
+use ich
+
+
+// db.US_Adult_Income.find({age: 27, native_country: ' Mexico'}).projection({age: 1 , native_country: 1})
+
+// db.US_Adult_Income.find({age: 27, native_country: ' Mexico'}, {age: 1 , native_country: 1, _id: 0})
+
+// db.US_Adult_Income.find({workclass: " State-gov", education: " Bachelors" }, {workclass: 1, education: 1, age: 1}).sort({age: -1})
+
+// $gte - больше или равно
+// $lte - больше или равно
+
+// db.US_Adult_Income.find({age: {$gte: 18, $lte: 30}}).sort({age: -1})
+
+// { $or: [ { income_bracket: { $ne: " <=50K" } }, { native_country: " United-States" } ] }
+
+// db.US_Adult_Income.find({$or:[
+//         {age: 28},
+//         {native_country: {$ne: ' United-States'}}
+//     ]})
+
+// db.US_Adult_Income.find(
+//     {hours_per_week: {$in: [45, 50, 80]}}
+// )
+
+// db.US_Adult_Income.find(
+//     {$or: [{workclass: ' Self-emp-not-inc', gender:' Female'},
+//     {education: 'HS-grad', native_country: ' United-States'}]
+//     })
+
+// db.customers.find(
+//     {CompanyName: 'Blauer See Delikatessen',
+//     Country: {$in: ['Germany', 'Mexico', 'UK', '05432-043', 'Austria']}},
+//     {CompanyName: 1, Country: 1, City: 1, PostalCode: 1, Phone: 1}
+// ).sort({Country: -1})
+

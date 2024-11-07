@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HW_27.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../something/2024_11_04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Stepik/python_prof/time_calendar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Stepik/python_prof/timedelta_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../My_certificates/stepik-certificate-82541-159c771.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../My_certificates/stepik-certificate-82541-159c771.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../something/findfiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/../something/findfiles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/itertools_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/itertools_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Stepik/python_prof/regular_expressions_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Stepik/python_prof/regular_expressions_1.py" afterDir="false" />
-    </list>
+    <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -259,7 +250,7 @@
       <workItem from="1730380348293" duration="7443000" />
       <workItem from="1730406046503" duration="985000" />
       <workItem from="1730446051225" duration="4217000" />
-      <workItem from="1730713055777" duration="430000" />
+      <workItem from="1730713055777" duration="713000" />
     </task>
     <servers />
   </component>
