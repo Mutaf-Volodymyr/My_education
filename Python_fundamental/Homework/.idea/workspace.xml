@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="" />
+    <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../something/2024_11_08_Sammary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_27.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW_27.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,65 +44,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.HW_12.executor": "Run",
-    "Python.HW_13.executor": "Run",
-    "Python.HW_14.executor": "Run",
-    "Python.HW_15.executor": "Run",
-    "Python.HW_16.executor": "Run",
-    "Python.HW_17.executor": "Run",
-    "Python.HW_18.executor": "Run",
-    "Python.HW_19.executor": "Run",
-    "Python.HW_20.executor": "Run",
-    "Python.HW_21.executor": "Run",
-    "Python.HW_22.executor": "Run",
-    "Python.HW_23.executor": "Run",
-    "Python.HW_24.executor": "Run",
-    "Python.HW_25.executor": "Run",
-    "Python.HW_26_2.executor": "Run",
-    "Python.HW_27.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/vladimirmutaf/Documents/IT/My_education/Python_fundamental/Homework",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.language",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.HW_12.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_13.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_14.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_15.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_16.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_17.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_18.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_19.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_20.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_21.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_22.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_23.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_24.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_25.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_26_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_27.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_28.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vladimirmutaf/Documents/IT/My_education/Python_fundamental/Homework&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Python.HW_27">
-    <configuration name="HW_23" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW_23.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="HW_24" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <option name="ENV_FILES" value="" />
@@ -191,13 +173,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="HW_28" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW_28.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.HW_27" />
+        <item itemvalue="Python.HW_28" />
         <item itemvalue="Python.HW_26_2" />
         <item itemvalue="Python.HW_25" />
         <item itemvalue="Python.HW_24" />
-        <item itemvalue="Python.HW_23" />
       </list>
     </recent_temporary>
   </component>
@@ -251,6 +256,8 @@
       <workItem from="1730406046503" duration="985000" />
       <workItem from="1730446051225" duration="4217000" />
       <workItem from="1730713055777" duration="713000" />
+      <workItem from="1730980370623" duration="1467000" />
+      <workItem from="1731052926876" duration="3495000" />
     </task>
     <servers />
   </component>
@@ -276,12 +283,13 @@
     <SUITE FILE_PATH="coverage/Homework$HW_14.coverage" NAME="HW_14 Coverage Results" MODIFIED="1726729467577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_17.coverage" NAME="HW_17 Coverage Results" MODIFIED="1727877620458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_22.coverage" NAME="HW_22 Coverage Results" MODIFIED="1729510253942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Homework$HW_27.coverage" NAME="HW_27 Coverage Results" MODIFIED="1730713606892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Homework$HW_27.coverage" NAME="HW_27 Coverage Results" MODIFIED="1731054755105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_26_2.coverage" NAME="HW_26_2 Coverage Results" MODIFIED="1730387489167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_12.coverage" NAME="HW_12 Coverage Results" MODIFIED="1726213333521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_24.coverage" NAME="HW_24 Coverage Results" MODIFIED="1730380479255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_18.coverage" NAME="HW_18 Coverage Results" MODIFIED="1728027517915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_25.coverage" NAME="HW_25 Coverage Results" MODIFIED="1730382568877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Homework$HW_28.coverage" NAME="HW_28 Coverage Results" MODIFIED="1730981631315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_15.coverage" NAME="HW_15 Coverage Results" MODIFIED="1727090510055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_21.coverage" NAME="HW_21 Coverage Results" MODIFIED="1729240047691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Homework$HW_19.coverage" NAME="HW_19 Coverage Results" MODIFIED="1728632050676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
