@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../something/2024_11_08_Sammary.py" beforeDir="false" afterPath="$PROJECT_DIR$/../something/2024_11_08_Sammary.py" afterDir="false" />
-    </list>
+    <list default="true" id="f1c798a0-f0ac-4ab3-adb4-32af7758a0c8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +253,7 @@
       <workItem from="1730446051225" duration="4217000" />
       <workItem from="1730713055777" duration="713000" />
       <workItem from="1730980370623" duration="1467000" />
-      <workItem from="1731052926876" duration="3495000" />
+      <workItem from="1731052926876" duration="3633000" />
     </task>
     <servers />
   </component>
