@@ -17,7 +17,7 @@ pygame.display.set_caption("Alien")
 
 # fighter
 FIGHTER_STEP = 5
-fighter_image = pygame.image.load('images/fighter.png')
+fighter_image = pygame.image.load('../images/fighter.png')
 fighter_width, fighter_height = fighter_image.get_size()
 fighter_x = (screen_width - fighter_width) / 2
 fighter_y = (screen_height - fighter_height)
@@ -25,14 +25,14 @@ fighter_is_moving_left = False
 fighter_is_moving_right = False
 
 # alien
-alien_image = pygame.image.load('images/alien.png')
+alien_image = pygame.image.load('../images/alien.png')
 alien_width, alien_height = alien_image.get_size()
 alien_x = randint(0, screen_width - alien_width)
 alien_y = 0
 alien_step = 0.5
 
 # ball
-ball_image = pygame.image.load('images/ball.png')
+ball_image = pygame.image.load('../images/ball.png')
 ball_width, ball_height = ball_image.get_size()
 ball_x, ball_y = 0, 0
 BALL_STEP = 10
