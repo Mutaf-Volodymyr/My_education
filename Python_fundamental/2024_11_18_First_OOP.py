@@ -39,27 +39,61 @@
 # 10. Используя функцию forAll() убедиться, что все сотрудники действительно старше 18 лет.
 
 
-from datetime import date, timedelta
-
-
-class Employee:
-    def __init__(self, name: str, age: int):
-        self.name = name
-        self.age = age
+from datetime import date
 
 
 class Person:
-    def __init__(self, name: str, birthday: date):
+    def __init__(self, name: str, birth_date: date):
         self.name = name
-        self.birthday = birthday
+        self.birth_date = birth_date
+        self.working = False
+
+    def __str__(self):
+        return f'{self.name} {self.birth_date}'
 
     def get_age(self):
-        return int((date.today() - self.birthday).days / 365.25)
+        today = date.today()
+        age = today.year - self.birth_date.year
+        if (today.month, today.day) < (self.birth_date.month, self.birth_date.day):
+            age -= 1
+        return age
 
-    def make_employee(self):
-        return Employee(self.name, self.get_age())
+    def is_adulthood(self):
+        return True if self.get_age() >= 18 else False
 
 
-vova = Person('vova', date(1990, 5, 2))
-lena = Person('lena', date(1996, 12, 3))
-andrey = Person('andrey', date(1999, 1, 31))
+# сначала создал через функцию super
+# class Employee(Person):
+#     def __init__(self, person):
+#         super().__init__(person.name, person.birth_date)
+# но изменения Person не затрагивали Employee. Учитывая то, что Employee формируются из Person и любые изменения в
+# Person должны изменять Employee, то было принято решение сделать так.
+
+class Employee:
+    def __init__(self, person):
+        self.person = person
+        person.working = True
+
+    def __str__(self):
+        return f'{self.person.name} {self.person.birth_date}'
+
+
+persons = [vova := Person('11111111', date(1990, 5, 2)),
+           lena := Person('Lena', date(1996, 12, 3)),
+           andrey := Person('Andrey', date(1999, 1, 31)),
+           mark := Person('Mark', date(2016, 3, 28)),
+           jim := Person('Jim', date(2004, 1, 15)),
+           kiril := Person('Kiril', date(2018, 6, 13)),
+           anton := Person('Anton', date(2005, 7, 11)),
+           ivan := Person('Ivan', date(1984, 5, 6)),
+           olha := Person('Olha', date(2012, 9, 9)),
+           lili := Person('Lili', date(2020, 11, 2))]
+
+employees = list(map(Employee, (filter(lambda x: x.is_adulthood(), persons))))
+
+vova.name = 'Vova'
+
+print(*employees, sep='\n')
+print(kiril.working)
+print(ivan.working)
+print(all(employee.person.get_age() >= 18 for employee in employees))
