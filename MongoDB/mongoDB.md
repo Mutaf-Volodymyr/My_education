@@ -13,6 +13,7 @@
 - `$and` - and
 - `$all` - значение поля массив где есть все перечисленные элементы
 - `$exists` - наличие или отсутствие поля 
+- `$subtract` - разница числовых значений
 
 
 https://github.com/pareikoVladislav/mongo/tree/main
