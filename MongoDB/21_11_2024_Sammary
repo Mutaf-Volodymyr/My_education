@@ -1,0 +1,139 @@
+
+// Из коллекции ich.imdb найти фильмы или сериалы, в которых не указан режиссер.
+
+db.imdb.find(
+    {
+        directors: {$exists: false},
+        type: {$in: ['movie', 'series']}
+    }
+)
+//
+// Из коллекции ich.imdb найти фильмы, произведенные в США и Франции
+db.imdb.find(
+    {
+        countries: {$all: ['USA', 'France']}
+    }
+)
+
+//
+// Из коллекции ich.imdb найти фильмы на китайском
+db.imdb.find(
+    {
+        languages: "Chinese"
+    }
+)
+//
+// Из коллекции ich.imdb найти фильмы на китайском или на французском
+db.imdb.find(
+    {
+        $or: [
+            {languages: "Chinese"},
+            {languages: "French"}
+        ]
+
+    }
+)
+
+
+//
+// Найти фильмы, жанры которых 'Mystery' и 'Sci-Fi'
+db.imdb.find(
+    {
+        genres: {$all: ['Mystery', 'Sci-Fi']}
+
+    }
+)
+
+
+//
+// Найти фильмы, жанры которых 'Mystery' ИЛИ 'Sci-Fi'
+db.imdb.find(
+    {
+        $or: [
+            {genres: 'Mystery'},
+            {genres: 'Sci-Fi'}
+        ]
+
+    }
+)
+//
+// Найти самый новый фильм без отметки рейтинга
+db.imdb.find(
+    {
+        rated: {$exists: false}
+    }
+).sort(
+    {
+        released: -1
+    }
+).limit(1)
+
+
+//
+// Найти длительность (runtime) и тип (type) сериала Berlin Alexanderplatz
+db.imdb.find(
+    {
+        title: 'Berlin Alexanderplatz'
+    }
+).projection(
+    {
+        title: 1,
+        runtime: 1,
+        type: 1,
+        _id: 0
+    }
+)
+
+//
+// Найти самый длинный сериал
+db.imdb.find(
+    {
+        type: 'series'
+    }
+).sort(
+    {
+        runtime: -1
+    }
+).limit(1)
+
+//
+// Найти сериал или фильм с самым высоким рейтингом. В коллекции есть документы
+// без рейтинга или с пустым значением. Попробовать несколько вариантов, в том числе не оптимальный
+
+db.imdb.find(
+    {
+        type: {$in: ['movie', 'series']},
+        "imdb.rating": {$exists: true},
+        "imdb.rating": {$ne: ''}
+    }
+).sort(
+    {
+        "imdb.rating": -1
+    }
+).limit(1)
+
+
+
+//
+// Найти топ 10 фильмов по рейтингу imdb из 1989 года
+db.imdb.find(
+    {
+        type: 'movie',
+        "imdb.rating": {$exists: true},
+        "imdb.rating": {$ne: ''},
+        year: '1989'
+    }
+).sort(
+    {
+        "imdb.rating": -1
+    }
+).limit(10)
+
+
+//
+// У скольких фильмов есть 2 победы в наградах (2 wins.)?
+db.imdb.countDocuments(
+    {
+        awards: '2 wins.'
+    }
+)

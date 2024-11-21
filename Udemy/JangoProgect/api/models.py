@@ -32,3 +32,6 @@ class CourseResource(ModelResource):
 
     def dehydrate_title(self, bundle):
         return bundle.data['title'].upper()
+
+
+
