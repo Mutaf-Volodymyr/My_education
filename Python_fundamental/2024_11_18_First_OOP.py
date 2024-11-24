@@ -99,19 +99,23 @@
 # print(all(employee.person.get_age() >= 18 for employee in employees))
 
 
-class Person:
-    count_persons = 0
+# class Person:
+#     count_persons = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#         self.count_persons += 1
+#
+# p1 = Person("sfd")
+# p2 = Person("sfd")
+# p3 = Person("sfd")
+# print(Person.count_persons)
+# print(p1.count_persons)
+# print(p2.count_persons)
+# print(p3.count_persons)
 
-    def __init__(self, name):
-        self.name = name
-        self.count_persons += 1
 
-p1 = Person("sfd")
-p2 = Person("sfd")
-p3 = Person("sfd")
-print(Person.count_persons)
-print(p1.count_persons)
-print(p2.count_persons)
-print(p3.count_persons)
+
+
 
 

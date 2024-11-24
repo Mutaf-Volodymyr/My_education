@@ -6,7 +6,7 @@
 #
 # Затем создайте экземпляр класса Rectangle и выведите информацию о нем,
 # его площадь и периметр.
-from venv import create
+
 
 
 class Rectangle:
@@ -74,7 +74,7 @@ class Person:
         return age
 
     def is_adulthood(self):
-        return True if self.get_age() >= 18 else False
+        return self.get_age() >= 18
 
     def get_all_accounts(self):
         return BankAccount.list_accounts.get(self, None)

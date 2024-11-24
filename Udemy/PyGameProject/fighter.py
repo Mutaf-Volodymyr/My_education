@@ -12,6 +12,8 @@ class Fighter:
         self.is_moving_left = False
         self.is_moving_right = False
 
+
+
     def move_left(self):
         self.is_moving_left = True
 
