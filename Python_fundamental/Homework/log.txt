@@ -1,0 +1,5 @@
+Arguments: (2, 3), {} Result: 5
+Arguments: (5, 7), {} Result: 12
+
+Arguments: (2, 3), {} Result: 5
+Arguments: (5, 7), {} Result: 12
