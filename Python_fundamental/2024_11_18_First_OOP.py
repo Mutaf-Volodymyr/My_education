@@ -117,5 +117,128 @@
 
 
 
+# import time
+# def slip_for_time(n):
+#     def decorator(func):
+#         def wrapper(*args, **kwargs):
+#             time.sleep(n)
+#             value = func(*args, **kwargs)
+#             return value
+#         return wrapper
+#     return decorator
+#
+#
+# @slip_for_time(10)
+# def my_function(a=5):
+#     return a
+#
+# # function = decorator(my_function)
+#
+# print(dir(my_function))
+
+
+
+####################################
+
+
+class My_class:
+    class_attr = "hallo"
+
+    @classmethod
+    def class_method(cls):
+        print(cls.class_attr)
+
+    @staticmethod
+    def static_method():
+        print('static method')
+
+# a = My_class()
+# a.class_method()
+# print(a.class_attr)
+
+
+######################
+
+
+# 1. Создайте абстрактный класс Plant, которого есть 3 свойства: display_name (читаемое
+# название), текущая высота (height), текущий возраст (age).
+
+from abc import ABC, abstractmethod
+
+class Plant(ABC):
+    def __init__(self, name, height, age):
+        self.__name = name
+        self.__height = height
+        self.__age = age
+
+
+    def display_name(self):
+        print(self.__name)
+
+    def display_info(self):
+        print(f'Class: {self.__class__.__name__}\n'
+                f'\t{self.__name}\n'
+                f'\t{self.__height}\n'
+                f'\t{self.__age}')
+
+
+    @abstractmethod
+    def grow_per_season(self):
+        pass
+
+
+
+
+
+
+class Flower(Plant):
+    def __init__(self, name, height, age, color):
+        super().__init__(name, height, age)
+        self.__color = color
+
+    def grow_per_season(self):
+        pass
+
+    def display_info(self):
+        super().display_info()
+        print(f'\t{self.__color}\n')
+
+
+class Tree(Plant):
+    def grow_per_season(self):
+        pass
+
+
+
+rose = Flower(name='Rose', height=100, age=1, color='red')
+rose.display_info()
+
+
+# 2. У классов Flower и Tree есть приватные статические атрибуты flower_grow_per_season и
+# tree_grow per_season соответственно. У класса Plant есть абстрактный метод
+# grow_per_season(), который переопределен в подклассах и возвращает соответствующее
+# статическое значение. Подумайте, почему статические атрибуты приватны и зачем нам
+# нужен абстрактный метод grow_per_season()? Почему создание обычного метода тут не
+# очень подходит?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

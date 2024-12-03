@@ -3,6 +3,7 @@
 # Декоратор должен принимать ожидаемые типы аргументов в качестве параметров.
 
 
+
 def validate_args(*args, **kwargs):
     position_args = args
     names_args = kwargs.items()
@@ -28,7 +29,7 @@ def greet(age, name):
     print(f"Привет, {name}! Тебе {age} лет.")
 
 
-@validate_args(age=int, name=str)
+@validate_args(int, name=str)
 def greet2(age, name):
     print(f"Привет, {name}! Тебе {age} лет.")
 
@@ -68,3 +69,13 @@ def add(a, b):
 
 add(2, 3)
 add(5, 7)
+
+
+
+
+
+
+
+
+
+

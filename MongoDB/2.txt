@@ -1,0 +1,65 @@
+db.createCollection(
+    'MegaPost_News',
+    {
+        validator: {
+            $jsonSchema: {
+                bsonType: 'object',
+                required: ['title', 'content', 'createdAt'],
+                additionalProperties: false,
+                properties: {
+                    _id: {
+                        bsonType: 'objectId'
+                    },
+                    title: {
+                        bsonType: 'string',
+                        minLength: 10
+                    },
+                    content: {
+                        bsonType: 'string',
+                        minLength: 15,
+                        maxLength: 1500
+                    },
+                    reactions: {
+                        bsonType: 'object',
+                        properties: {
+                            likes: {
+                                bsonType: 'int',
+                                minimum: 0
+                            },
+                            dislikes: {
+                                bsonType: 'int',
+                                minimum: 0
+                            }
+                        },
+                        additionalProperties: false,
+                    },
+                    comments: {
+                        bsonType: 'array',
+                        items: {
+                            bsonType: 'object',
+                            required: ['author', 'content', 'createdAt'],
+                            additionalProperties: false,
+                            preperties: {
+                                author: {
+                                    bsonType: 'string'
+                                },
+                                content: {
+                                    bsonType: 'string'
+                                },
+                                createdAt: {
+                                    bsonType: 'date'
+                                }
+                            }
+                        }
+                    },
+                    createdAt: {
+                        bsonType: 'date'
+                    },
+                    updatedAt: {
+                        bsonType: 'date'
+                    }
+                }
+            }
+        }
+    }
+)

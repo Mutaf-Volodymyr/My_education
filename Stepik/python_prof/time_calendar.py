@@ -6,7 +6,7 @@
 # при вызове с аргументами *args, а вторым — примерное время (в секундах), затраченное на вычисление этого значения.
 
 import time
-from operator import index
+
 
 
 def calculate_it(func, *args):

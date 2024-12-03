@@ -12,6 +12,8 @@ class CategoryResource(ModelResource):
         allowed_methods = ['get']
 
 
+
+
 class CourseResource(ModelResource):
     class Meta:
         queryset = Course.objects.all()
