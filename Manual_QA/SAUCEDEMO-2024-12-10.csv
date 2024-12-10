@@ -1,0 +1,25 @@
+"id","title","test case id","author","assignee","actual result","status","milestone","severity","external issues","attachments","tags"
+"4","Only the first 15 characters of a comment will be sent","","Volodymyr Mutaf","Unassigned","**Steps to reproduce:**
+
+1. open [https://response-form-2.herokuapp.com](https://response-form-2.herokuapp.com)
+2. enter any name
+3. enter any comment over 15 characters
+
+**Expected result:**
+entire comment has been sent
+**Actual result:**
+only the first 15 characters have been sent","Open","","Major","","https://d2cxucsjd6xvsd.cloudfront.net/public/team/4ac7363c0b700d359526f507d1be942a19e4b7ea/attachment/62dbc01580c3070730a61586fcc8423c5eb688de/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-12-10%20%D0%B2%2012.02.16.png
+https://d2cxucsjd6xvsd.cloudfront.net/public/team/4ac7363c0b700d359526f507d1be942a19e4b7ea/attachment/954b02a5d0b05a2328f2e98d7cdf313b8986da77/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-12-10%20%D0%B2%2012.02.22.png",""
+"3","Wrong format date MM/DD/YYYY","","Volodymyr Mutaf","Unassigned","**Steps to reproduce:**
+
+1. open [https://response-form-2.herokuapp.com](https://response-form-2.herokuapp.com)
+2. select any date
+
+**Expected result:**
+Date format must be DD.MM.YY
+
+**Actual result:**
+Date format is MM/DD/YYYY
+
+<br>
+<br>","Open","","Normal","","https://d2cxucsjd6xvsd.cloudfront.net/public/team/4ac7363c0b700d359526f507d1be942a19e4b7ea/attachment/f6ade9dd54c4023fca9758c297934c63e29023ae/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-12-06%20%D0%B2%2013.06.16.png",""
