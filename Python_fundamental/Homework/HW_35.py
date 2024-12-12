@@ -4,15 +4,17 @@
 # - Текст ответа (response text)
 # - Заголовки ответа (response headers)
 
-# import requests
-# get_response = lambda url: requests.get(url)
+# Осторожно! Трюк выполняется профессионалом.
+# Ни в коем случае не пытайтесь повторить это самостоятельно!!!!!
+import requests
+get_response = lambda url: requests.get(url)
 
-# url = "https://api.example.com"
-# url2 = "https://google.com"
-# response = get_response(url2)
-# print("Status Code:", response.status_code)
-# print("Response Text:", response.text)
-# print("Response Headers:", response.headers)
+
+url2 = "https://google.com"
+response = get_response(url2)
+print("Status Code:", response.status_code)
+print("Response Text:", response.text)
+print("Response Headers:", response.headers)
 
 
 
