@@ -46,8 +46,24 @@ from collections import Counter
 # 13. Напишите программу, которая конвертирует дату в формате yyyy-mm-dd в формат
 # dd-mm-yyyy.
 
-text = 'https://www.somesite.com/news/2024/01/22/article.html'
+# text = 'https://www.somesite.com/news/2024/01/22/article.html'
 # pattern = r'\d{4}/\d{2}/\d{2}'
 # res = re.findall(pattern, text)
 # print(res)
 
+from bs4 import BeautifulSoup
+import requests
+import re
+
+
+response = requests.get('https://wise.com/ru/currency-converter/usd-to-eur-rate').text
+soup = BeautifulSoup(response, 'html.parser')
+links = soup.find_all(class_='d-inline-block')
+res = ''
+for link in links:
+    if 'EUR' in link:
+        res = link
+
+
+
+print(res)
