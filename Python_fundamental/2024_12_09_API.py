@@ -64,6 +64,6 @@ for link in links:
     if 'EUR' in link:
         res = link
 
-
+''
 
 print(res)

@@ -4,7 +4,7 @@ from pymongo.synchronous.client_session import ClientSession
 
 import os
 import dotenv
-from pathlib import Path
+from pathlib import Pathсаамит
 
 
 dotenv.load_dotenv(Path('.env'))  # {...}
