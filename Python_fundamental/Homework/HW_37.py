@@ -3,38 +3,38 @@
 # Программа должна запросить у пользователя название таблицы
 # и вывести все ее строки или сообщение, что такой таблицы нет.
 
-import os
-import dotenv
-from pathlib import Path
-import mysql.connector
-
-
-dotenv.load_dotenv(Path('../.env'))
-dbconfig = {'host': os.environ.get('host'),
-            'user': os.environ.get('user'),
-            'password': os.environ.get('password'),
-            'database': 'ich_edit'}
-
-connection = mysql.connector.connect(**dbconfig)
-cursor = connection.cursor()
-cursor.execute('SHOW TABLES')
-tables_dict = dict(enumerate(map(lambda x: x[0], cursor.fetchall()), 1))
-print('Hi. I have the following tables and can show you one of them.')
-for k, v in tables_dict.items():
-    print(f'{k}: {v}')
-choice = int(input('Enter a number: '))
-
-cursor.execute(
-f'''
-    SELECT *
-    FROM ich_edit.{tables_dict[choice]}
-''')
-
-result = cursor.fetchall()
-print(*result, sep='\n')
-cursor.close()
-connection.close()
-
+# import os
+# import dotenv
+# from pathlib import Path
+# import mysql.connector
+#
+#
+# dotenv.load_dotenv(Path('../.env'))
+# dbconfig = {'host': os.environ.get('host'),
+#             'user': os.environ.get('user'),
+#             'password': os.environ.get('password'),
+#             'database': 'ich_edit'}
+#
+# connection = mysql.connector.connect(**dbconfig)
+# cursor = connection.cursor()
+# cursor.execute('SHOW TABLES')
+# tables_dict = dict(enumerate(map(lambda x: x[0], cursor.fetchall()), 1))
+# print('Hi. I have the following tables and can show you one of them.')
+# for k, v in tables_dict.items():
+#     print(f'{k}: {v}')
+# choice = int(input('Enter a number: '))
+#
+# cursor.execute(
+# f'''
+#     SELECT *
+#     FROM ich_edit.{tables_dict[choice]}
+# ''')
+#
+# result = cursor.fetchall()
+# print(*result, sep='\n')
+# cursor.close()
+# connection.close()
+#
 
 
 # В базе данных ich_edit три таблицы. Users с полями (id, name, age), Products с полями (pid, prod, quantity) и Sales с полями (sid, id, pid).

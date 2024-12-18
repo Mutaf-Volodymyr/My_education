@@ -94,6 +94,7 @@ db.Spotify_Youtube.aggregate(
                 Stream: -1
             }
         },
+        {$limit: 20},
         {
             $out:
                 {
