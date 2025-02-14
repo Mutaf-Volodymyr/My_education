@@ -1,4 +1,4 @@
-# http://www.uitestingplayground.com/ajax
+# http://www.uitestingplayground.com/loaddelay
 
 
 from cgitb import handler
@@ -21,19 +21,17 @@ def driver():
     options = Options()
     # options.add_argument("--headless")
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-    driver.get('http://www.uitestingplayground.com/ajax')
+    driver.get('http://www.uitestingplayground.com/loaddelay')
     driver.maximize_window()
     yield driver
     driver.quit()
 
 
 def test_wait(driver):
-    trigger = driver.find_element(By.CSS_SELECTOR, "[class='btn btn-primary'")
-    trigger.click()
     wait = WebDriverWait(driver, 20)
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '[class="bg-success"]')))
-    response_text = driver.find_element(By.CSS_SELECTOR,'[class="bg-success"]')
-    assert response_text.text == 'Data loaded with AJAX get request.'
+    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '[class="btn btn-primary"]')))
+    btn_text = driver.find_element(By.CSS_SELECTOR,'[class="btn btn-primary"]').text
+    assert btn_text == 'Button Appearing After Delay'
 
 
 
