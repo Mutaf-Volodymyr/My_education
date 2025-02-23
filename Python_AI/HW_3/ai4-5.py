@@ -29,7 +29,7 @@ embeddings_array = np.array(embeddings_list)  # Преобразуем в numpy 
 dimension = embeddings_array.shape[1] # (6, 256)
 index = faiss.IndexHNSWFlat(dimension, 32)
 index.add(embeddings_array)  # Добавляем embeddings в индекс
-print(sys.getsizeof(index))
+
 
 # 4. Функция для выполнения семантического поиска
 def semantic_search(query, index, texts, k=2):

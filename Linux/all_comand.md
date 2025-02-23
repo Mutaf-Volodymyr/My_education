@@ -162,7 +162,7 @@
 - `git merge upstream/main`
 - `git rev-parse --show-toplevel ` - где инциализирован гит
 - `git diff` - показать конфликты
-- `git mergetool` - 
+- `git mergetool` - открыть мельд для решения конфликта
 - `git config --global merge.tool meld`
 - `git remote add upstream git@github.com:it-career-hub/git_team_work.git`
 

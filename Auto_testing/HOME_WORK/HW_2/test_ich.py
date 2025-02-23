@@ -4,7 +4,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 import pytest
 from time import sleep
 from selenium.webdriver.common.by import By
-driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+# driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
 @pytest.fixture
 def driver():
